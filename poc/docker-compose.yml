@@ -1,0 +1,28 @@
+services:
+  verbatim:
+    build: .
+    restart: unless-stopped
+    environment:
+      # Read from the .env file next to this file (never commit that file).
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - MAX_LIVE_CALLS_PER_DAY=${MAX_LIVE_CALLS_PER_DAY:-300}
+    expose:
+      - "8000"
+
+  # Caddy gets and renews the HTTPS certificate for your domain by itself.
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - DOMAIN=${DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    depends_on:
+      - verbatim
+
+volumes:
+  caddy_data:

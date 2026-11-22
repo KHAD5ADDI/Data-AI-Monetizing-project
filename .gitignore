@@ -1,0 +1,24 @@
+# Dependencies and build output (rebuild with npm install / npm run build)
+node_modules/
+deck/dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets: never commit a key
+.env
+*.pem
+
+# Raw patent download (about 370 MB). Rebuild with poc/prepare_data.py
+poc/data_raw/
+
+# Local archives and exports (PDFs of the pitch are not committed)
+*.zip
+*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db

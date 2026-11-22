@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verbatim, prior art word for word</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2335557a'/%3E%3Ctext x='32' y='45' font-size='40' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23fffdf9'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f0e8; --surface: #fffdf9; --ink: #1c2434; --muted: #667086; --line: #e2dccf;
+    --blue: #35557a; --blue-deep: #263f5e; --blue-soft: #e8edf3;
+    --green: #3d7a65; --green-soft: #e4efe9; --amber: #a9701a; --amber-soft: #f6ecd9;
+    --red: #a8465a; --red-soft: #f6e4e8; --mark: #f2dd9b;
+    --shadow: 0 1px 2px rgba(28, 36, 52, 0.05), 0 8px 22px rgba(28, 36, 52, 0.06);
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.5; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 24px 64px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .brand { font-family: var(--serif); font-size: 34px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
+  .brand span { color: var(--blue); }
+  .tag { font-family: var(--serif); font-size: 19px; color: #3a4459; margin: 6px 0 0; }
+  .mode { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; border: 1px solid var(--line); background: #fff; }
+  .mode i { width: 9px; height: 9px; border-radius: 50%; background: #b3b8c6; display: inline-block; }
+  .mode.live { color: #2f6552; border-color: #b6d4c7; background: var(--green-soft); }
+  .mode.live i { background: var(--green); }
+  .mode.fallback { color: #8a5a10; border-color: #e5cd9b; background: var(--amber-soft); }
+  .mode.fallback i { background: var(--amber); }
+  .lead { max-width: 760px; color: #3a4459; margin: 18px 0 14px; font-size: 17px; }
+
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; box-shadow: var(--shadow); }
+  .note { border-radius: 14px; padding: 12px 16px; font-size: 14.5px; margin: 10px 0; border: 1px solid var(--line); }
+  .note.info { background: var(--blue-soft); border-color: #c1cddb; }
+  .note.warn { background: var(--amber-soft); border-color: #e5cd9b; }
+  .note.err { background: var(--red-soft); border-color: #e4b3bd; }
+  .note.ok { background: var(--green-soft); border-color: #b6d4c7; }
+
+  h2 { font-family: var(--serif); font-weight: 600; font-size: 24px; margin: 28px 0 10px; letter-spacing: -0.01em; }
+  .step { font-family: var(--serif); font-weight: 600; font-size: 22px; margin: 26px 0 10px; }
+  .muted { color: var(--muted); }
+  .small { font-size: 13.5px; }
+
+  .examples { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+  button { font-family: inherit; cursor: pointer; }
+  .ex { border: 1px solid var(--line); background: #fff; color: var(--ink); border-radius: 999px; padding: 8px 16px; font-size: 14px; font-weight: 600; transition: all .15s; }
+  .ex:hover { border-color: var(--blue); color: var(--blue-deep); background: var(--blue-soft); }
+  .ex.on { background: var(--blue); border-color: var(--blue); color: #fff; }
+  textarea { width: 100%; min-height: 150px; resize: vertical; border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; font-family: var(--sans); font-size: 16px; line-height: 1.5; color: var(--ink); background: #fffefb; outline: none; }
+  textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(53, 85, 122, 0.15); }
+  .actions { display: flex; align-items: center; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
+  .go { background: var(--blue); color: #fff; border: 0; border-radius: 999px; padding: 12px 26px; font-size: 16px; font-weight: 700; box-shadow: 0 4px 14px rgba(53, 85, 122, 0.3); transition: background .15s, transform .05s; }
+  .go:hover { background: var(--blue-deep); }
+  .go:active { transform: translateY(1px); }
+  .go:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; }
+  .ghost { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 9px 18px; font-size: 14px; font-weight: 600; color: var(--ink); }
+  .ghost:hover { border-color: var(--blue); }
+
+  /* loading */
+  .loading { display: none; margin-top: 18px; }
+  .loading.show { display: block; }
+  .steps { display: grid; gap: 8px; margin-top: 8px; }
+  .st { display: flex; align-items: center; gap: 10px; font-size: 15px; color: var(--muted); }
+  .st .dot { width: 12px; height: 12px; border-radius: 50%; background: #d7d2c4; flex-shrink: 0; }
+  .st.active { color: var(--ink); font-weight: 600; }
+  .st.active .dot { background: var(--blue); animation: pulse 1s infinite; }
+  .st.done { color: var(--green); }
+  .st.done .dot { background: var(--green); }
+  @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: .5; } }
+
+  /* cost tiles */
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .tile .lab { font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  .tile .val { font-family: var(--serif); font-size: 26px; font-weight: 600; color: var(--blue); line-height: 1.15; margin-top: 2px; word-break: break-word; }
+  .tile .sub { font-size: 12px; color: var(--muted); margin-top: 2px; word-break: break-word; }
+
+  /* results layout */
+  .results { display: grid; grid-template-columns: 330px 1fr; gap: 18px; align-items: start; }
+  .plist { display: grid; gap: 10px; }
+  .pbtn { text-align: left; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; box-shadow: var(--shadow); color: var(--ink); transition: border-color .15s; }
+  .pbtn:hover { border-color: #b9c6d6; }
+  .pbtn.sel { border: 2px solid var(--blue); padding: 11px 13px; background: linear-gradient(180deg, #eef2f7, #fffdf9); }
+  .pbtn .rank { font-size: 12px; font-weight: 700; color: var(--blue); letter-spacing: .06em; }
+  .pbtn .pt { font-weight: 600; font-size: 14.5px; line-height: 1.3; margin: 2px 0 6px; }
+  .pbtn .pn { font-size: 12.5px; color: var(--muted); }
+  .sim { height: 8px; border-radius: 999px; background: #e9e4d8; overflow: hidden; margin-top: 6px; }
+  .sim > div { height: 100%; background: linear-gradient(90deg, #9db3cc, var(--blue)); border-radius: 999px; }
+  .chip { display: inline-block; padding: 1px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700; border: 1px solid var(--line); background: #fff; color: #3a4459; white-space: nowrap; }
+  .chip.overlaps { background: var(--green-soft); border-color: #b6d4c7; color: #2f6552; }
+  .chip.partial { background: var(--amber-soft); border-color: #e5cd9b; color: #8a5a10; }
+  .chip.none { background: #f1eee6; border-color: #d9d6cc; color: #667086; }
+  .chip.unverified, .chip.not_analyzed { background: var(--red-soft); border-color: #e4b3bd; color: var(--red); }
+  .detail h3 { font-family: var(--serif); font-size: 21px; margin: 0 0 4px; line-height: 1.25; }
+  .detail a { color: var(--blue); font-weight: 600; }
+  .abstract { font-size: 14px; color: #3a4459; margin: 8px 0 12px; }
+  .counts { margin: 4px 0 10px; font-size: 14.5px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 6px 8px; border-bottom: 2px solid var(--line); }
+  td { padding: 10px 8px; border-bottom: 1px solid #ebe5d8; vertical-align: top; font-size: 14.5px; }
+  td.claim { font-size: 14px; line-height: 1.55; }
+  mark { background: var(--mark); padding: 1px 2px; border-radius: 3px; color: var(--ink); }
+  details { margin-top: 6px; }
+  summary { cursor: pointer; font-size: 13px; color: var(--blue); font-weight: 600; }
+  .expl { font-size: 13px; color: var(--muted); margin-top: 6px; }
+  .rej { background: var(--red-soft); border: 1px solid #e4b3bd; border-radius: 10px; padding: 8px 10px; font-size: 13.5px; color: #7d2f3f; }
+  .bar { height: 6px; border-radius: 999px; background: #e9e4d8; overflow: hidden; margin-top: 4px; width: 70px; }
+  .bar > div { height: 100%; background: var(--blue); }
+  footer { margin-top: 40px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
+  .hidden { display: none !important; }
+  @media (max-width: 860px) {
+    .results { grid-template-columns: 1fr; }
+    .tiles { grid-template-columns: 1fr 1fr; }
+    .wrap { padding: 20px 16px 48px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="brand">Verba<span>tim</span></div>
+      <div class="tag" id="tag">Prior art, word for word.</div>
+    </div>
+    <div class="mode" id="mode"><i></i><span>Checking the server</span></div>
+  </header>
+
+  <p class="lead">Describe an invention in a few lines. Verbatim finds the 5 closest published patents and shows, claim by claim, what overlaps, with the exact sentence highlighted and the patent number. You read and you decide.</p>
+
+  <div class="note info" id="domain">Loading the patent database...</div>
+  <div class="note warn" id="disclaimer"></div>
+
+  <div class="step">1. Describe the invention</div>
+  <div class="card">
+    <div class="small muted" style="margin-bottom:8px">About 5 lines, in English or French. Or load a fictional example in one click:</div>
+    <div class="examples" id="examples"></div>
+    <textarea id="text" placeholder="Describe how the invention works technically, in a few lines..." maxlength="4000"></textarea>
+    <div class="actions">
+      <button class="go" id="go" disabled>Find prior art</button>
+      <span class="small muted" id="count">0 characters</span>
+    </div>
+    <div class="loading" id="loading">
+      <div class="small muted">This usually takes 20 to 60 seconds with the live model.</div>
+      <div class="steps" id="steps"></div>
+    </div>
+  </div>
+
+  <div id="out"></div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const LABEL = { overlaps: 'Overlaps', partial: 'Partial', none: 'None', unverified: 'Unverified', not_analyzed: 'Not analyzed' };
+let META = null, RES = null, SEL = 0, LASTTEXT = '', stepTimer = null;
+
+function renderMeta(m) {
+  META = m;
+  $('tag').textContent = m.tagline;
+  $('disclaimer').innerHTML = '<b>' + esc(m.disclaimer) + '</b>';
+  $('domain').innerHTML = '<b>Domain covered:</b> ' + esc(m.domain_label) + '. Frozen database of <b>' + m.n_patents.toLocaleString('en-US') +
+    '</b> published US patent applications (HUPD sample, January 2016, licence ' + esc(m.licence) + '). An invention outside this domain will be flagged as such.';
+  const mode = $('mode');
+  if (m.llm_available) { mode.className = 'mode live'; mode.querySelector('span').textContent = 'Live analysis ready'; }
+  else { mode.className = 'mode fallback'; mode.querySelector('span').textContent = 'Fallback mode: 3 precomputed examples'; }
+  $('examples').innerHTML = m.examples.map((e, i) => '<button class="ex" data-i="' + i + '">Example: ' + esc(e.title) + '</button>').join('');
+  document.querySelectorAll('.ex').forEach((b) => b.addEventListener('click', () => {
+    document.querySelectorAll('.ex').forEach((x) => x.classList.remove('on'));
+    b.classList.add('on');
+    $('text').value = m.examples[+b.dataset.i].text;
+    onInput();
+    $('out').innerHTML = '';
+  }));
+  $('foot').innerHTML = 'Data: ' + esc(m.source) + ' (licence ' + esc(m.licence) + '). ' + esc(m.citation) + '. ' + esc(m.disclaimer);
+}
+
+function onInput() {
+  const n = $('text').value.trim().length;
+  $('count').textContent = n + ' characters';
+  $('go').disabled = n < 20;
+}
+
+const STEPS = ['Putting the description into English', 'Searching the patent database', 'Comparing every claim, one by one', 'Checking each quote against the patent text'];
+function startSteps() {
+  $('loading').classList.add('show');
+  let i = 0;
+  const draw = () => {
+    $('steps').innerHTML = STEPS.map((s, k) => '<div class="st ' + (k < i ? 'done' : k === i ? 'active' : '') + '"><span class="dot"></span>' + s + '</div>').join('');
+  };
+  draw();
+  clearInterval(stepTimer);
+  stepTimer = setInterval(() => { if (i < STEPS.length - 1) { i++; draw(); } }, 6000);
+}
+function stopSteps() { clearInterval(stepTimer); $('loading').classList.remove('show'); }
+
+async function search(force) {
+  const text = $('text').value.trim();
+  LASTTEXT = text;
+  $('go').disabled = true;
+  $('out').innerHTML = '';
+  startSteps();
+  try {
+    const r = await fetch('/api/analyze', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text, force: !!force }) });
+    RES = await r.json();
+  } catch (e) {
+    RES = { mode: 'error', notices: [{ level: 'err', text: 'The server could not be reached. Check your connection and retry.' }] };
+  }
+  stopSteps();
+  $('go').disabled = $('text').value.trim().length < 20;
+  SEL = 0;
+  render();
+  $('out').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+const notes = (arr) => (arr || []).map((n) => '<div class="note ' + (n.level === 'err' ? 'err' : n.level === 'warn' ? 'warn' : 'info') + '">' + esc(n.text) + '</div>').join('');
+
+function tile(label, value, sub) { return '<div class="card tile"><div class="lab">' + esc(label) + '</div><div class="val">' + esc(value) + '</div><div class="sub">' + esc(sub || '') + '</div></div>'; }
+
+function highlight(claimText, quote, ctx) {
+  const i = quote ? claimText.indexOf(quote) : -1;
+  if (i < 0) return esc(claimText.slice(0, 300));
+  let pre = claimText.slice(0, i), mid = claimText.slice(i, i + quote.length), post = claimText.slice(i + quote.length);
+  if (ctx != null) {
+    if (pre.length > ctx) pre = '... ' + pre.slice(-ctx);
+    if (post.length > ctx) post = post.slice(0, ctx) + ' ...';
+  }
+  return esc(pre) + '<mark>' + esc(mid) + '</mark>' + esc(post);
+}
+
+function rowHtml(row, claim, pub) {
+  const st = row.status;
+  let body;
+  if ((st === 'overlaps' || st === 'partial') && row.quote) {
+    body = highlight(claim.text, row.quote, 130) + '<details><summary>Full text of claim ' + claim.num + ' (' + esc(pub) + ')</summary>' + highlight(claim.text, row.quote, null) + '</details>';
+  } else if (st === 'unverified') {
+    body = '<div class="rej"><b>Quote rejected by the guardrail:</b> the passage returned by the model does not exist word for word in the claim. Status unverified, ignore it.</div>';
+  } else if (st === 'not_analyzed') { body = '<span class="muted">Claim missing from the model response.</span>'; }
+  else { body = '<span class="muted">No relevant passage.</span>'; }
+  const expl = row.explanation && st !== 'unverified' && st !== 'not_analyzed' ? '<div class="expl">' + esc(row.explanation) + '</div>' : '';
+  let conf = '';
+  if (st !== 'unverified' && st !== 'not_analyzed') { const p = Math.round(row.confidence * 100); conf = p + '%<div class="bar"><div style="width:' + p + '%"></div></div>'; }
+  return '<tr><td style="white-space:nowrap"><b>' + claim.num + '</b><div class="small muted">' + (claim.dependent ? 'dependent' : 'independent') + '</div></td><td><span class="chip ' + st + '">' + (LABEL[st] || st) + '</span></td><td class="claim">' + body + expl + '</td><td>' + conf + '</td></tr>';
+}
+
+function detailHtml(p) {
+  const link = 'https://patents.google.com/patent/' + encodeURIComponent(p.pub) + '/en';
+  let h = '<div class="card detail"><h3>' + esc(p.title) + '</h3><div class="small">Published application <b>' + esc(p.pub) + '</b> · <a href="' + link + '" target="_blank" rel="noopener">view on Google Patents</a> · ' + p.claims.length + ' claims in the database</div>';
+  h += '<div class="abstract">' + esc(p.abstract.slice(0, 420)) + (p.abstract.length > 420 ? '...' : '') + '</div>';
+  if (!p.rows) return h + '<div class="note info">No claim by claim analysis for this patent.</div></div>';
+  const cnt = { overlaps: 0, partial: 0, none: 0 };
+  p.rows.forEach((r) => { if (cnt[r.status] != null) cnt[r.status]++; });
+  let line = '<b>' + cnt.overlaps + '</b> overlap · <b>' + cnt.partial + '</b> partial · <b>' + cnt.none + '</b> none (first ' + p.rows.length + ' claims)';
+  if (p.rejected) line += ' · <b style="color:var(--red)">' + p.rejected + ' quote(s) rejected by the guardrail</b>';
+  const byNum = {}; p.claims.forEach((c) => { byNum[c.num] = c; });
+  const trs = p.rows.filter((r) => byNum[r.num]).map((r) => rowHtml(r, byNum[r.num], p.pub)).join('');
+  h += '<div class="counts">' + line + '</div><div style="overflow-x:auto"><table><thead><tr><th>Claim</th><th>Status</th><th>Exact quote (checked in the claim text)</th><th>Confidence</th></tr></thead><tbody>' + trs + '</tbody></table></div></div>';
+  return h;
+}
+
+function render() {
+  const r = RES;
+  if (!r) return;
+  let h = '';
+  if (r.mode === 'error') { $('out').innerHTML = notes(r.notices); return; }
+  h += notes(r.notices);
+  if (r.mode === 'ood') {
+    h += '<div class="note err"><b>Out of domain.</b> The closest patent has a similarity of ' + r.best.toFixed(3) + ', below the threshold of ' + r.threshold.toFixed(3) + '. Verbatim only covers: <b>' + esc(META.domain_label) + '</b>. No claim by claim analysis was run. Rephrase by describing how the invention works technically, or try an example.</div>';
+    h += '<div class="small muted">Response time: ' + r.seconds.toFixed(1) + ' s.</div><div class="actions"><button class="ghost" id="force">Analyze anyway (results likely irrelevant)</button></div>';
+    $('out').innerHTML = h;
+    $('force').addEventListener('click', () => search(true));
+    return;
+  }
+  const u = r.usage, t = r.seconds.toFixed(1) + ' s';
+  if (r.mode === 'live' && u) {
+    h += '<div class="tiles">' + tile('Response time', t, 'search and analysis') + tile('Cost of this call', u.cost.toFixed(4) + ' USD', 'from real token usage') +
+      tile('Tokens in / out', u.in.toLocaleString('en-US') + ' / ' + u.out.toLocaleString('en-US'), u.detail) +
+      tile('Analysis model', u.model, u.price_in != null ? u.price_in + ' / ' + u.price_out + ' USD per M tokens' : '') + '</div>';
+  } else if (r.mode === 'cache') {
+    h += '<div class="tiles">' + tile('Response time', t, 'read from cache') + tile('Cost of this call', '0 USD', 'no API call') + tile('Tokens in / out', '0 / 0', 'precomputed') + tile('Source', 'JSON cache', 'fallback mode') + '</div>';
+  } else {
+    h += '<div class="tiles">' + tile('Response time', t, 'similarity search') + tile('Cost of this call', '0 USD', 'no LLM call') + tile('Tokens in / out', '0 / 0', '') + tile('Source', 'Local embeddings', '') + '</div>';
+  }
+  h += '<h2>The 5 closest patents</h2><div class="results"><div class="plist">';
+  r.patents.forEach((p, i) => {
+    h += '<button class="pbtn ' + (i === SEL ? 'sel' : '') + '" data-i="' + i + '"><div class="rank">#' + (i + 1) + '</div><div class="pt">' + esc(p.title) + '</div><div class="pn">' + esc(p.pub) + ' · similarity ' + p.score.toFixed(3) + '</div><div class="sim"><div style="width:' + Math.max(4, Math.round(p.score * 100)) + '%"></div></div></button>';
+  });
+  h += '</div><div id="detail">' + detailHtml(r.patents[SEL]) + '</div></div>';
+  $('out').innerHTML = h;
+  document.querySelectorAll('.pbtn').forEach((b) => b.addEventListener('click', () => {
+    SEL = +b.dataset.i;
+    document.querySelectorAll('.pbtn').forEach((x) => x.classList.toggle('sel', +x.dataset.i === SEL));
+    $('detail').innerHTML = detailHtml(RES.patents[SEL]);
+  }));
+}
+
+$('text').addEventListener('input', onInput);
+$('go').addEventListener('click', () => search(false));
+fetch('/api/meta').then((r) => r.json()).then(renderMeta).catch(() => {
+  $('domain').textContent = 'The server could not be reached.';
+  $('mode').querySelector('span').textContent = 'Offline';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+{$DOMAIN} {
+	reverse_proxy verbatim:8000
+}

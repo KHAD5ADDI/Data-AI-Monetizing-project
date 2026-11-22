@@ -1,0 +1,1686 @@
+{
+ "generated_by": "baseline-embeddings",
+ "generated_on": "2026-11-22 13:30 UTC",
+ "entries": {
+  "fridge": {
+   "invention": "A refrigerator equipped with a camera automatically identifies the foods it contains using a computer vision model.\nThe system estimates, for each food, its opening date and remaining freshness.\nEvery day it generates recipes that prioritize foods close to their expiry date.\nThe recipes take into account the allergies and diets of the household.\nA smartphone notification warns the user before a product is wasted.",
+   "best_score": 0.8648011684417725,
+   "patents": [
+    {
+     "publication_number": "US20170213184A1",
+     "title": "Food Inventory System And Method",
+     "score": 0.8648011684417725,
+     "rows": [
+      {
+       "num": 1,
+       "status": "overlaps",
+       "quote": "receive input in a computing device a “Use Camera” selection, wherein the “Use Camera” selection prompts the camera to turn on and capture an image of the food inventory item placed in front of the camera;",
+       "confidence": 1.0,
+       "explanation": "Closest passage to the invention (similarity 0.86); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "partial",
+       "quote": "The non-transitory computer readable storage medium of claim 1, wherein the scanned barcode is searched for in a barcode database stored in a memory of the non-transitory computer readable medium to recognize the food inventory item.",
+       "confidence": 0.68,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "overlaps",
+       "quote": "The non-transitory computer readable storage medium of claim 1, wherein the captured image of the food inventory item is searched for in an image recognition API stored in a memory of the non-transitory computer readable medium to recognize the food inventory item.",
+       "confidence": 0.81,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "partial",
+       "quote": "The non-transitory computer readable storage medium of claim 1, wherein the table listing food inventory items may be sortable by details, comprising storage date, category type, name of food inventory item, number of days the food inventory item was stored, expiration date, and quantity of items.",
+       "confidence": 0.65,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "partial",
+       "quote": "The non-transitory computer readable storage medium of claim 1, wherein the food inventory items listed in the table listing food inventory items may be deleted and the details of the food inventory item may be edited.",
+       "confidence": 0.64,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.52,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "partial",
+       "quote": "The non-transitory computer readable storage medium of claim 1, wherein the table listing suggested recipes may be configured to show the recipe name, whether all of the ingredients of the recipe are in stock, and the number of ingredients that are needed in the recipe.",
+       "confidence": 0.63,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.58,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.37,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "overlaps",
+       "quote": "receive input in a computing device a “Use Camera” selection, wherein the “Use Camera” selection prompts the camera to turn on and capture an image of the food inventory item placed in front of the camera;",
+       "confidence": 1.0,
+       "explanation": "Closest passage to the invention (similarity 0.86); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "partial",
+       "quote": "The computing device of claim 10, wherein the scanned barcode is searched for in a barcode database stored in a memory of the non-transitory computer readable medium to recognize the food inventory item.",
+       "confidence": 0.78,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "overlaps",
+       "quote": "The computing device of claim 10, wherein the captured image of the food inventory item is searched for in an image recognition API stored in a memory of the non-transitory computer readable medium to recognize the food inventory item.",
+       "confidence": 0.93,
+       "explanation": "Closest passage to the invention (similarity 0.85); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20160217561A1",
+     "title": "Method And System For Determining Quality Of Markings Applied To Food Products",
+     "score": 0.8502137064933777,
+     "rows": [
+      {
+       "num": 1,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.58,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.55,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.48,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.6,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.53,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.43,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.57,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.58,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.45,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "partial",
+       "quote": "an area in which the at least one image capture device captures image data, and combinations thereof,",
+       "confidence": 0.73,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "partial",
+       "quote": "The system of claim 1, wherein the objects to be marked are eggs.",
+       "confidence": 0.67,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.49,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20160139790A1",
+     "title": "Control Method, Storage Medium, And Information Providing Method In Terminal Apparatus And Information Providing System",
+     "score": 0.8453683853149414,
+     "rows": [
+      {
+       "num": 1,
+       "status": "overlaps",
+       "quote": "by using a memory that manages a user log including at least a cooking time and a food to be cooked with a cooking device used by each user in a plurality of users,",
+       "confidence": 0.92,
+       "explanation": "Closest passage to the invention (similarity 0.85); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "partial",
+       "quote": "outputting to the first cooking device a setting command to set, as the selected cooking time, the cooking time corresponding to the selected icon.",
+       "confidence": 0.74,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "partial",
+       "quote": "displaying on the display the user interface including the distribution and a region of the recommended cooking time in the distribution;",
+       "confidence": 0.7,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "partial",
+       "quote": "acquiring from the server the recommended cooking time corresponding to the first user's food to be cooked and corresponding to an age group related to a user ID of the first user from recommended cooking times for respective foods for respective age groups obtained based on cooking times with cooking devices recorded in the user log from the plurality of users;",
+       "confidence": 0.76,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "partial",
+       "quote": "The control method according to claim 1, wherein the recommended cooking time is an average value of cooking times for the same food described in the user log from the plurality of users.",
+       "confidence": 0.69,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "overlaps",
+       "quote": "and the server includes data stored therein describing a correspondence between the user ID and an age group for each user, and the recommended cooking time is an average value of cooking times for the same food for the respective age groups described in the user log from the plurality of users.",
+       "confidence": 0.81,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "overlaps",
+       "quote": "by using a memory that manages a user log including at least a cooking time and a food to be cooked with a cooking device used by each user in a plurality of users,",
+       "confidence": 0.92,
+       "explanation": "Closest passage to the invention (similarity 0.85); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "overlaps",
+       "quote": "and a setting unit that, in response to detecting that a cooking time is selected by performing an input operation on the user interface, outputs to the first cooking device a setting command to set the selected cooking time.",
+       "confidence": 0.84,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "partial",
+       "quote": "The terminal apparatus according to claim 8, wherein the terminal apparatus including the display is connected to the first cooking device via a network.",
+       "confidence": 0.62,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "overlaps",
+       "quote": "searching the memory to retrieve a recommended cooking time corresponding to a first user's food to be cooked received from a terminal apparatus used by the first user and transmitting the recommended cooking time to the terminal apparatus;",
+       "confidence": 0.86,
+       "explanation": "Closest passage to the invention (similarity 0.85); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20170221129A1",
+     "title": "System, Method, And Non-Transitory Computer-Readable Storage Media For Creating A Meal Plan",
+     "score": 0.839043140411377,
+     "rows": [
+      {
+       "num": 1,
+       "status": "partial",
+       "quote": "A system for creating a meal plan comprising:",
+       "confidence": 0.77,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "partial",
+       "quote": "and include the identified recipes as recipe options for the meal plan.",
+       "confidence": 0.74,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "partial",
+       "quote": "and include the identified recipes as recipe options for the meal plan.",
+       "confidence": 0.74,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "partial",
+       "quote": "and include the identified recipe as a recipe option for the meal plan.",
+       "confidence": 0.79,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "partial",
+       "quote": "and include the identified recipes as recipe options for the meal plan.",
+       "confidence": 0.74,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "partial",
+       "quote": "and excluding the identified recipe as a recipe option for the meal plan.",
+       "confidence": 0.61,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "partial",
+       "quote": "and excluding the identified recipe as a recipe option for the meal plan.",
+       "confidence": 0.61,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "partial",
+       "quote": "and include the identified recipe as a recipe option for the meal plan.",
+       "confidence": 0.79,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "partial",
+       "quote": "present a plurality of recipe options on the display;",
+       "confidence": 0.6,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "partial",
+       "quote": "the mobile computing device including a memory for storing an application and a processor for executing the application, the server computer of the business being coupled to a business database for storing recipe data,",
+       "confidence": 0.8,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20160196410A1",
+     "title": "System For Monitoring And Alerting Users Of Dha Levels",
+     "score": 0.8369913697242737,
+     "rows": [
+      {
+       "num": 1,
+       "status": "overlaps",
+       "quote": "and, automatically generating an alert and transmitting the alert via at least one predetermined communication method, without user intervention, responsive to the user's dietary intake relative to the recommended intake being a predetermined relation to a baseline.",
+       "confidence": 0.87,
+       "explanation": "Closest passage to the invention (similarity 0.85); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "partial",
+       "quote": "The method of claim 1, wherein an alert is automatically generated and the alert is transmitted to at least one predetermined third party responsive to the level of the user's DHA dietary intake relative to recommended intake being below a predefined baseline.",
+       "confidence": 0.62,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.17,
+       "explanation": "Closest passage to the invention (similarity 0.78); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.17,
+       "explanation": "Closest passage to the invention (similarity 0.78); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.34,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.5,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.34,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.57,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.17,
+       "explanation": "Closest passage to the invention (similarity 0.78); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.3,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "partial",
+       "quote": "obtain and record in a database individualized diet data, the individualized diet data having parameters indicative of at least one of foods and supplements consumed by a user during a defined time period;",
+       "confidence": 0.64,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.58,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    }
+   ],
+   "usage": {
+    "model": null,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "seconds": 0.0
+   }
+  },
+  "fraud": {
+   "invention": "Software builds a graph linking the suppliers, bank accounts, addresses and invoices of a company.\nA graph neural network detects rings of fake invoices and bank accounts that are shared in a suspicious way.\nEach invoice receives a fraud risk score.\nThe system explains the score by displaying the subgraph of relationships that triggered it.\nAn analyst validates or rejects the alert, and this feedback retrains the model.",
+   "best_score": 0.8389686346054077,
+   "patents": [
+    {
+     "publication_number": "US20170206466A1",
+     "title": "Real Time Autonomous Archetype Outlier Analytics",
+     "score": 0.8389686346054077,
+     "rows": [
+      {
+       "num": 1,
+       "status": "partial",
+       "quote": "A computer-implemented method for detecting transaction outliers in a dataset representing a plurality of transactions, the method compromising:",
+       "confidence": 0.74,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.4,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.57,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.35,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.22,
+       "explanation": "Closest passage to the invention (similarity 0.78); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.58,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.48,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.57,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.3,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.33,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "partial",
+       "quote": "A system for detecting transaction outliers in a dataset representing a plurality of transactions, the system comprising:",
+       "confidence": 0.64,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.48,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20160274879A1",
+     "title": "Software Analysis Framework",
+     "score": 0.8389261960983276,
+     "rows": [
+      {
+       "num": 1,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.59,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.11,
+       "explanation": "Closest passage to the invention (similarity 0.77); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.56,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.56,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.49,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.28,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.38,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.19,
+       "explanation": "Closest passage to the invention (similarity 0.78); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.59,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.02,
+       "explanation": "Closest passage to the invention (similarity 0.76); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.47,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.56,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20170200205A1",
+     "title": "Method And System For Analyzing User Reviews",
+     "score": 0.836978018283844,
+     "rows": [
+      {
+       "num": 1,
+       "status": "partial",
+       "quote": "A computer-implemented method for surprise analysis in user reviews, the method comprising:",
+       "confidence": 0.77,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.51,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.44,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.26,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.39,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.09,
+       "explanation": "Closest passage to the invention (similarity 0.77); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.31,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "partial",
+       "quote": "and identifying outlier user reviews as surprises, wherein the outlier user reviews deviate significantly from the determined clusters.",
+       "confidence": 0.69,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "overlaps",
+       "quote": "A computer system for surprise analysis in user reviews, the system comprising:",
+       "confidence": 0.93,
+       "explanation": "Closest passage to the invention (similarity 0.85); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.51,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "partial",
+       "quote": "The computer system of claim 10, wherein determining the first surprise comprises determining whether a predicted recommend score deviates from the recommend score of the first user review.",
+       "confidence": 0.63,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.43,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20160203490A1",
+     "title": "Systems And Methods For Travel-Related Anomaly Detection",
+     "score": 0.8359129428863525,
+     "rows": [
+      {
+       "num": 1,
+       "status": "overlaps",
+       "quote": "computing a fraud score in connection with the account to which the received transaction relates, wherein the computed fraud score indicates a probability of the account being in a compromised condition;",
+       "confidence": 0.83,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "partial",
+       "quote": "wherein the computed self-similarity score indicates similarity of the received transaction to other transactions of the account in the set of prior transactions.",
+       "confidence": 0.67,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.36,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.44,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.42,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "partial",
+       "quote": "The computer system of claim 1, wherein the determined suggested action comprises reducing a fraud risk ranking for the received transaction,",
+       "confidence": 0.68,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.59,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "partial",
+       "quote": "wherein the determined suggested action comprises increasing a fraud risk ranking for the received transaction in response to a computed fraud score that is above a predetermined fraud threshold and a computed travel score that is below a predetermined travel score threshold.",
+       "confidence": 0.63,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "partial",
+       "quote": "The computer system of claim 1, wherein the determined suggested action comprises updating user profile data of the account user in response to a computed fraud score that is below a predetermined fraud threshold and a computed travel score that is below a predetermined travel score threshold.",
+       "confidence": 0.62,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.42,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "overlaps",
+       "quote": "computing a fraud score in connection with the account to which the received transaction relates, wherein the computed fraud score indicates a probability of the account being in a compromised condition;",
+       "confidence": 0.83,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "partial",
+       "quote": "wherein the computed self-similarity score indicates similarity of the received transaction to other transactions of the account in the set of prior transactions.",
+       "confidence": 0.67,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20170193513A1",
+     "title": "Digital Wallet Fraud Guard",
+     "score": 0.8335849046707153,
+     "rows": [
+      {
+       "num": 1,
+       "status": "partial",
+       "quote": "A digital wallet fraud guard system comprising:",
+       "confidence": 0.61,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.57,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.5,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.53,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "partial",
+       "quote": "The digital wallet fraud guard system according to claim 1, wherein the digital wallet fraud guard agent comprises a triggered alert indicator, and wherein a fraud threat assessment is communicated in a human readable form to a user.",
+       "confidence": 0.73,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "overlaps",
+       "quote": "The digital wallet fraud guard system according to claim 5, wherein the triggered alert indicator comprises a visual display of different colors, each of the colors indicating a relative degree of fraud risk.",
+       "confidence": 0.92,
+       "explanation": "Closest passage to the invention (similarity 0.85); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "partial",
+       "quote": "wherein the merchant fraud threat database is configured to store a fraud threat assessment in association with the transaction context data.",
+       "confidence": 0.67,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.48,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "overlaps",
+       "quote": "and activating, by the digital wallet fraud guard agent, a triggered alert indicator in response to the threat level and the short information, wherein the triggered alert indicator is configured to display a threat level indication.",
+       "confidence": 0.87,
+       "explanation": "Closest passage to the invention (similarity 0.85); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.27,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.5,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "overlaps",
+       "quote": "The method of claim 9, wherein the triggered alert indicator communicates a fraud threat assessment in a human readable form to a user.",
+       "confidence": 0.8,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    }
+   ],
+   "usage": {
+    "model": null,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "seconds": 0.0
+   }
+  },
+  "meeting": {
+   "invention": "An assistant transcribes a video conference meeting in real time and attributes the speech to each participant.\nA language model extracts from the transcript the decisions made and the actions to carry out, with their owner and due date.\nA participant reviews and validates the list before it is sent.\nThe validated actions are automatically created in the team's project management tool.\nA one page summary is emailed to all participants.",
+   "best_score": 0.8253330588340759,
+   "patents": [
+    {
+     "publication_number": "US20160154959A1",
+     "title": "A Method And System For Monitoring Website Defacements",
+     "score": 0.8253330588340759,
+     "rows": [
+      {
+       "num": 1,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.54,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.16,
+       "explanation": "Closest passage to the invention (similarity 0.78); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.22,
+       "explanation": "Closest passage to the invention (similarity 0.78); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.32,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.47,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.41,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.35,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.22,
+       "explanation": "Closest passage to the invention (similarity 0.78); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.31,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.38,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.3,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.26,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20160140309A1",
+     "title": "Auto Attendant System With Status Notification Components",
+     "score": 0.8246638774871826,
+     "rows": [
+      {
+       "num": 1,
+       "status": "partial",
+       "quote": "A communication system for utilization with a remote patient,",
+       "confidence": 0.61,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.45,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.48,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.3,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.48,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20170132518A1",
+     "title": "Electronic Meeting Intelligence",
+     "score": 0.8234500885009766,
+     "rows": [
+      {
+       "num": 1,
+       "status": "partial",
+       "quote": "receiving audio/video data for an electronic meeting that includes a plurality of participants;",
+       "confidence": 0.77,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "partial",
+       "quote": "identifying, based on performing voice or face recognition on the meeting content data, one or more participants in the electronic meeting;",
+       "confidence": 0.69,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "partial",
+       "quote": "determining, based on performing sentiment analysis on the meeting content data, a sentiment of a participant in the electronic meeting;",
+       "confidence": 0.67,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "partial",
+       "quote": "recognizing, based on performing speech or text recognition on the meeting content data, one or more keywords indicating a task to be completed after the electronic meeting;",
+       "confidence": 0.67,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "overlaps",
+       "quote": "The apparatus of claim 1, wherein the report includes a meeting transcript generated during the electronic meeting.",
+       "confidence": 0.88,
+       "explanation": "Closest passage to the invention (similarity 0.85); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.57,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "partial",
+       "quote": "receiving audio/video data for an electronic meeting that includes a plurality of participants;",
+       "confidence": 0.77,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "partial",
+       "quote": "identifying, based on performing voice or face recognition on the meeting content data, one or more participants in the electronic meeting;",
+       "confidence": 0.69,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "partial",
+       "quote": "determining, based on performing sentiment analysis on the meeting content data, a sentiment of a participant in the electronic meeting;",
+       "confidence": 0.67,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "partial",
+       "quote": "recognizing, based on performing speech or text recognition on the meeting content data, one or more keywords indicating a task to be completed after the electronic meeting;",
+       "confidence": 0.67,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.6,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.47,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20170212590A1",
+     "title": "User Action Activated Voice Recognition",
+     "score": 0.8205097913742065,
+     "rows": [
+      {
+       "num": 1,
+       "status": "partial",
+       "quote": "and activating, responsive to identifying the data as an activation cue, a voice response system.",
+       "confidence": 0.71,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "partial",
+       "quote": "and performing an action based upon the voice input.",
+       "confidence": 0.75,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.58,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "partial",
+       "quote": "The method of claim 2, wherein the receiving voice input comprises receiving voice input while the action performed by the user is maintained.",
+       "confidence": 0.69,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.54,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.52,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.49,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.38,
+       "explanation": "Closest passage to the invention (similarity 0.80); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.49,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.3,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "partial",
+       "quote": "and activate, responsive to identifying the data as an activation cue, a voice response system.",
+       "confidence": 0.71,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "partial",
+       "quote": "and perform an action based upon the voice input.",
+       "confidence": 0.77,
+       "explanation": "Closest passage to the invention (similarity 0.84); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    },
+    {
+     "publication_number": "US20170212738A1",
+     "title": "Translation Of A Visual Representation Into An Executable Information Extraction Program",
+     "score": 0.8196166753768921,
+     "rows": [
+      {
+       "num": 1,
+       "status": "partial",
+       "quote": "obtaining a validated model comprising a plurality of concepts, wherein each of the concepts comprises semantics associated with a visual representation of an object;",
+       "confidence": 0.62,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 2,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.54,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 3,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.45,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 4,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.54,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 5,
+       "status": "partial",
+       "quote": "The method of claim 1, comprising validating the executable source code.",
+       "confidence": 0.67,
+       "explanation": "Closest passage to the invention (similarity 0.83); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 6,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.34,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 7,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.57,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 8,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.53,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 9,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.58,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 10,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.53,
+       "explanation": "Closest passage to the invention (similarity 0.81); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 11,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.33,
+       "explanation": "Closest passage to the invention (similarity 0.79); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      },
+      {
+       "num": 12,
+       "status": "none",
+       "quote": "",
+       "confidence": 0.57,
+       "explanation": "Closest passage to the invention (similarity 0.82); local embedding analysis, no LLM.",
+       "quote_rejected": false,
+       "rejected_text": ""
+      }
+     ],
+     "rejected": 0
+    }
+   ],
+   "usage": {
+    "model": null,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "seconds": 0.0
+   }
+  }
+ }
+}
