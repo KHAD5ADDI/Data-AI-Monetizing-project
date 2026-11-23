@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Prior art search and claim-by-claim analysis workbench with deterministic verbatim quote verification.",
   "engines": {
-    "node": ">=22.0.0"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "vite",
