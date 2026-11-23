@@ -1,0 +1,262 @@
+/* ==========================================================================
+   Verbatim — Legal-Tech Precision Design Tokens (Single Source of Truth)
+   Cool Architectural Daylight × Editorial Patent Typography × Precision Badges
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* 1. Daylight Surfaces & Deep Slate Evidentiary Chrome */
+  --bg-canvas: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-muted: #E8EEF5;
+  --bg-code: #FCFDFE;
+  --bg-terminal: #0B1120;
+  --bg-terminal-elevated: #111B30;
+  --bg-glass: rgba(248, 250, 252, 0.84);
+  --bg-glass-card: rgba(255, 255, 255, 0.88);
+  --bg-glass-seg: rgba(255, 255, 255, 0.68);
+  --bg-glass-popover: rgba(255, 255, 255, 0.97);
+  --bg-hover: rgba(15, 23, 42, 0.04);
+  --bg-active: rgba(15, 23, 42, 0.075);
+  --bg-selected: #EFF6FF;
+
+  /* 2. Living Radial Aura & 26px Engineering Dot-Grid */
+  --grid-dot-pattern: radial-gradient(circle, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  --grid-dot-size: 26px 26px;
+  --aura-idle:
+    radial-gradient(circle 620px at 50% 34%, rgba(147, 197, 253, 0.34) 0%, rgba(196, 181, 253, 0.16) 44%, rgba(248, 250, 252, 0) 76%),
+    radial-gradient(circle 460px at 34% 30%, rgba(125, 211, 252, 0.26) 0%, rgba(248, 250, 252, 0) 72%),
+    radial-gradient(circle 420px at 68% 38%, rgba(165, 180, 252, 0.22) 0%, rgba(248, 250, 252, 0) 70%);
+  --aura-halo-idle:
+    radial-gradient(circle 420px at 50% 26%, rgba(26, 115, 232, 0.16) 0%, rgba(14, 165, 233, 0.10) 38%, rgba(99, 102, 241, 0.06) 58%, rgba(248, 250, 252, 0) 76%);
+  --aura-thinking:
+    radial-gradient(circle 640px at 50% 38%, rgba(79, 70, 229, 0.26) 0%, rgba(139, 92, 246, 0.16) 46%, rgba(248, 250, 252, 0) 76%),
+    radial-gradient(circle 480px at 40% 32%, rgba(26, 115, 232, 0.22) 0%, rgba(248, 250, 252, 0) 70%);
+  --aura-verified:
+    radial-gradient(circle 580px at 50% 32%, rgba(16, 185, 129, 0.20) 0%, rgba(14, 165, 233, 0.12) 46%, rgba(248, 250, 252, 0) 76%),
+    radial-gradient(circle 420px at 44% 30%, rgba(52, 211, 153, 0.14) 0%, rgba(248, 250, 252, 0) 70%);
+  --aura-shield:
+    radial-gradient(circle 580px at 50% 32%, rgba(245, 158, 11, 0.22) 0%, rgba(225, 29, 72, 0.14) 46%, rgba(248, 250, 252, 0) 76%),
+    radial-gradient(circle 420px at 58% 30%, rgba(251, 146, 60, 0.14) 0%, rgba(248, 250, 252, 0) 70%);
+
+  /* 3. Ink Hierarchy (WCAG AA/AAA) */
+  --ink-primary: #0F172A;
+  --ink-secondary: #334155;
+  --ink-muted: #64748B;
+  --ink-tertiary: #94A3B8;
+  --ink-on-accent: #FFFFFF;
+  --ink-on-terminal: #E2E8F0;
+  --ink-terminal-muted: #94A3B8;
+
+  /* 4. Structural Hairlines & Focus Halos */
+  --border-hairline: #E2E8F0;
+  --border-subtle: #EDF2F7;
+  --border-strong: #CBD5E1;
+  --border-glass: rgba(255, 255, 255, 0.92);
+  --border-glass-subtle: rgba(226, 232, 240, 0.72);
+  --border-terminal: rgba(148, 163, 184, 0.18);
+  --border-focus: #1A73E8;
+  --focus-ring: 0 0 0 3px rgba(26, 115, 232, 0.16);
+  --focus-ring-hero:
+    0 20px 48px rgba(26, 115, 232, 0.12),
+    0 0 0 3px rgba(26, 115, 232, 0.08),
+    0 3px 12px rgba(15, 23, 42, 0.05);
+
+  /* 5. Brand & Interactive Accents */
+  --accent-primary: #1A73E8;
+  --accent-primary-hover: #1557B0;
+  --accent-primary-subtle: #EFF6FF;
+  --accent-primary-border: #BFDBFE;
+  --accent-indigo: #4F46E5;
+  --accent-teal: #0D9488;
+  --accent-gradient: linear-gradient(110deg, #0F172A 0%, #1A73E8 52%, #4F46E5 100%);
+
+  /* 6. Semantic Status Badges (5px Precision Geometry) */
+  --status-overlaps-bg: #ECFDF5;
+  --status-overlaps-fg: #065F46;
+  --status-overlaps-border: #A7F3D0;
+  --status-overlaps-dot: #059669;
+
+  --status-partial-bg: #FFFBEB;
+  --status-partial-fg: #92400E;
+  --status-partial-border: #FDE68A;
+  --status-partial-dot: #D97706;
+
+  --status-none-bg: #F1F5F9;
+  --status-none-fg: #475569;
+  --status-none-border: #CBD5E1;
+  --status-none-dot: #94A3B8;
+
+  --status-unverified-bg: #FFF1F2;
+  --status-unverified-fg: #9F1239;
+  --status-unverified-border: #FECDD3;
+  --status-unverified-dot: #E11D48;
+
+  /* Engine & Field Palette */
+  --engine-bm25-bg: #F0FDFA;
+  --engine-bm25-fg: #0F766E;
+  --engine-bm25-border: #99F6E4;
+  --engine-bm25-dot: #0D9488;
+
+  --engine-haiku-bg: #F0F7FF;
+  --engine-haiku-fg: #1D4ED8;
+  --engine-haiku-border: #BFDBFE;
+  --engine-haiku-dot: #1A73E8;
+
+  --engine-sonnet-bg: #F5F3FF;
+  --engine-sonnet-fg: #4338CA;
+  --engine-sonnet-border: #C7D2FE;
+  --engine-sonnet-dot: #4F46E5;
+
+  --engine-guardrail-bg: #ECFDF5;
+  --engine-guardrail-fg: #065F46;
+  --engine-guardrail-border: #A7F3D0;
+  --engine-guardrail-dot: #059669;
+
+  /* XAI Field Colors */
+  --field-title: #1A73E8;
+  --field-abstract: #4F46E5;
+  --field-indep: #0D9488;
+  --field-dep: #64748B;
+  --field-bigrams: #D97706;
+
+  /* Verbatim Exact-Quote Highlight */
+  --mark-bg: #FEF3C7;
+  --mark-border: #D97706;
+  --mark-fg: #0F172A;
+  --term-mark-bg: #DBEAFE;
+  --term-mark-fg: #1E3A8A;
+
+  /* 7. Typography */
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --text-2xs: 0.6875rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-md: 0.9375rem;
+  --text-lg: 1.0625rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-hero: clamp(2.4rem, 4.4vw, 3.5rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.68;
+
+  --tracking-tight: -0.025em;
+  --tracking-snug: -0.012em;
+  --tracking-caps: 0.07em;
+
+  /* 8. Spacing, Radii, Shadows & Transitions */
+  --space-1: 4px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-2-5: 10px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  --radius-xs: 4px;
+  --radius-badge: 5px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 9999px;
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 14px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 10px rgba(15, 23, 42, 0.05), 0 16px 36px rgba(15, 23, 42, 0.07);
+  --shadow-glass: 0 2px 8px rgba(15, 23, 42, 0.05), 0 8px 24px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --shadow-popover: 0 12px 32px rgba(15, 23, 42, 0.12), 0 2px 6px rgba(15, 23, 42, 0.06);
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 120ms var(--ease-standard);
+  --transition-base: 180ms var(--ease-standard);
+  --transition-aura: 650ms var(--ease-spring);
+
+  --z-aura: -1;
+  --z-base: 1;
+  --z-header: 40;
+  --z-popover: 65;
+}
+
+/* Data-attribute semantic bindings */
+[data-status='overlaps'],
+[data-status='done'] {
+  --pill-bg: var(--status-overlaps-bg);
+  --pill-fg: var(--status-overlaps-fg);
+  --pill-border: var(--status-overlaps-border);
+  --pill-dot: var(--status-overlaps-dot);
+}
+
+[data-status='partial'],
+[data-status='warn'] {
+  --pill-bg: var(--status-partial-bg);
+  --pill-fg: var(--status-partial-fg);
+  --pill-border: var(--status-partial-border);
+  --pill-dot: var(--status-partial-dot);
+}
+
+[data-status='none'],
+[data-status='pending'],
+[data-status='skipped'] {
+  --pill-bg: var(--status-none-bg);
+  --pill-fg: var(--status-none-fg);
+  --pill-border: var(--status-none-border);
+  --pill-dot: var(--status-none-dot);
+}
+
+[data-status='unverified'],
+[data-status='not_analyzed'],
+[data-status='err'] {
+  --pill-bg: var(--status-unverified-bg);
+  --pill-fg: var(--status-unverified-fg);
+  --pill-border: var(--status-unverified-border);
+  --pill-dot: var(--status-unverified-dot);
+}
+
+[data-status='active'] {
+  --pill-bg: var(--engine-haiku-bg);
+  --pill-fg: var(--engine-haiku-fg);
+  --pill-border: var(--engine-haiku-border);
+  --pill-dot: var(--engine-haiku-dot);
+}
+
+[data-engine='BM25F'] {
+  --pill-bg: var(--engine-bm25-bg);
+  --pill-fg: var(--engine-bm25-fg);
+  --pill-border: var(--engine-bm25-border);
+  --pill-dot: var(--engine-bm25-dot);
+}
+
+[data-engine='Haiku'] {
+  --pill-bg: var(--engine-haiku-bg);
+  --pill-fg: var(--engine-haiku-fg);
+  --pill-border: var(--engine-haiku-border);
+  --pill-dot: var(--engine-haiku-dot);
+}
+
+[data-engine='Sonnet'] {
+  --pill-bg: var(--engine-sonnet-bg);
+  --pill-fg: var(--engine-sonnet-fg);
+  --pill-border: var(--engine-sonnet-border);
+  --pill-dot: var(--engine-sonnet-dot);
+}
+
+[data-engine='Guardrail'] {
+  --pill-bg: var(--engine-guardrail-bg);
+  --pill-fg: var(--engine-guardrail-fg);
+  --pill-border: var(--engine-guardrail-border);
+  --pill-dot: var(--engine-guardrail-dot);
+}
