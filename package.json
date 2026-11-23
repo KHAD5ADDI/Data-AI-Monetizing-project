@@ -1,12 +1,38 @@
 {
-  "name": "verbatim-poc",
-  "version": "1.0.0",
+  "name": "verbatim",
+  "version": "2.0.0",
   "private": true,
-  "description": "Vercel deployment of the Verbatim prior-art proof of concept",
+  "type": "module",
+  "description": "Prior art search and claim-by-claim analysis workbench with deterministic verbatim quote verification.",
   "engines": {
-    "node": "22.x"
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "benchmark": "node scripts/benchmark.mjs all",
+    "benchmark:dev": "node scripts/benchmark.mjs dev",
+    "benchmark:test": "node scripts/benchmark.mjs test"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "1.13.0"
+    "@anthropic-ai/sdk": "^1.13.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.3"
   }
 }

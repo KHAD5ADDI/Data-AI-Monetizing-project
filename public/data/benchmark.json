@@ -1,0 +1,920 @@
+{
+  "generated_on": "2026-11-23",
+  "corpus_size": 3511,
+  "index_stats": {
+    "terms": 10927,
+    "bigrams": 37910,
+    "build_ms": 647
+  },
+  "engine": {
+    "name": "BM25F + Technical Bigrams",
+    "config": {
+      "k1": 1.2,
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "weight": 3,
+          "b": 0.4
+        },
+        {
+          "name": "abstract",
+          "label": "Abstract",
+          "weight": 2,
+          "b": 0.55
+        },
+        {
+          "name": "indep",
+          "label": "Independent claims",
+          "weight": 1,
+          "b": 0.65
+        },
+        {
+          "name": "dep",
+          "label": "Dependent claims",
+          "weight": 0.35,
+          "b": 0.7
+        }
+      ],
+      "bigramBoost": 0.4,
+      "bigramK1": 1.2,
+      "bigramB": 0.5,
+      "minBigramDf": 2
+    },
+    "ood": {
+      "commonTermDfRatio": 0.005,
+      "commonWeight": 0.6,
+      "densityWeight": 0.4,
+      "densityScale": 2,
+      "threshold": 0.47
+    }
+  },
+  "baseline_comparison": {
+    "label": "Legacy single-field BM25",
+    "test_top1": 15,
+    "test_top5": 18,
+    "test_n": 20,
+    "test_mrr": 0.8188,
+    "test_in_domain_accepted": 20,
+    "test_ood_refused": 9,
+    "test_ood_total": 10
+  },
+  "calibration": {
+    "bestThreshold": 0.47,
+    "accuracy": 19,
+    "total": 19,
+    "devGap": {
+      "maxOod": 0.45,
+      "minIn": 0.497
+    }
+  },
+  "dev": {
+    "split": "dev",
+    "n": 8,
+    "top1": 8,
+    "top5": 8,
+    "top20": 8,
+    "mrr": 1,
+    "avgQueryMs": 0.77,
+    "threshold": 0.47,
+    "inDomainAccepted": 11,
+    "inDomainTotal": 11,
+    "oodRefused": 8,
+    "oodTotal": 8,
+    "inDomainScores": [
+      0.497,
+      0.5275,
+      0.5862,
+      0.6197,
+      0.6274,
+      0.6335,
+      0.6427,
+      0.6622,
+      0.6754,
+      0.6904,
+      0.7737
+    ],
+    "oodScores": [
+      0.1827,
+      0.2694,
+      0.2806,
+      0.314,
+      0.3736,
+      0.3858,
+      0.3926,
+      0.45
+    ],
+    "cases": [
+      {
+        "pub": "US20170091258A1",
+        "title": "Packet Processing Rule Versioning",
+        "cpc_group": "G06F",
+        "text": "A software network switch keeps its packet matching tables up to date without stopping traffic. Every forwarding rule is tagged with the span of table versions for which it remains valid. When an update arrives, new rules are added under a newer version while packets in flight keep using the old one.",
+        "rank": 1,
+        "domain": 0.6622,
+        "domainSignals": {
+          "commonTermRatio": 0.8462,
+          "topDensity": 0.3863,
+          "bestBm25": 85.104,
+          "commonTermsMatched": 22,
+          "totalQueryTerms": 26,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3534,
+        "top1Pub": "US20170091258A1"
+      },
+      {
+        "pub": "US20160162244A1",
+        "title": "System And Method For Multi-Angle Videos",
+        "cpc_group": "G06F",
+        "text": "A video player shows a 3D-looking cube on the screen. Each face of the cube plays the same scene filmed from a different camera angle, and all the videos stay in sync. The viewer spins the cube to switch to another angle.",
+        "rank": 1,
+        "domain": 0.6197,
+        "domainSignals": {
+          "commonTermRatio": 0.8,
+          "topDensity": 0.3492,
+          "bestBm25": 64.392,
+          "commonTermsMatched": 16,
+          "totalQueryTerms": 20,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3119,
+        "top1Pub": "US20160162244A1"
+      },
+      {
+        "pub": "US20170220479A1",
+        "title": "Dynamic Cache Memory Management With Cache Pollution Avoidance",
+        "cpc_group": "G06F",
+        "text": "A processor decides whether data fetched into its fastest cache should also be copied into lower cache levels. It labels data in an address range as short-lived or transient. Transient data is kept out of the other caches so it does not pollute them.",
+        "rank": 1,
+        "domain": 0.6427,
+        "domainSignals": {
+          "commonTermRatio": 0.7895,
+          "topDensity": 0.4225,
+          "bestBm25": 71.486,
+          "commonTermsMatched": 15,
+          "totalQueryTerms": 19,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.4103,
+        "top1Pub": "US20170220479A1"
+      },
+      {
+        "pub": "US20170213138A1",
+        "title": "Determining User Sentiment In Chat Data",
+        "cpc_group": "G06N",
+        "text": "Software reads chat messages and works out whether the writer feels positive or negative. A first classifier spots an emotional word in the message, then features are extracted from the surrounding words. A second classifier uses those features to give the final sentiment of the user.",
+        "rank": 1,
+        "domain": 0.6904,
+        "domainSignals": {
+          "commonTermRatio": 0.8261,
+          "topDensity": 0.4869,
+          "bestBm25": 95.986,
+          "commonTermsMatched": 19,
+          "totalQueryTerms": 23,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.471,
+        "top1Pub": "US20170213138A1"
+      },
+      {
+        "pub": "US20160132346A1",
+        "title": "Memory Space Mapping Techniques For Server Based Graphics Processing",
+        "cpc_group": "G06F",
+        "text": "Graphics rendering is done on a remote server for several virtual machines. A guest driver shim is loaded inside each virtual machine together with a display interface that calls back into it. The memory seen by the guest is mapped so the shared graphics processor can access it.",
+        "rank": 1,
+        "domain": 0.7737,
+        "domainSignals": {
+          "commonTermRatio": 0.8333,
+          "topDensity": 0.6841,
+          "bestBm25": 121.363,
+          "commonTermsMatched": 20,
+          "totalQueryTerms": 24,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.6721,
+        "top1Pub": "US20160132346A1"
+      },
+      {
+        "pub": "US20160224089A1",
+        "title": "Data Storage Device And Power-Interruption Detection Method",
+        "cpc_group": "G06F",
+        "text": "A flash storage drive can tell whether it lost power while writing. Each page keeps a counter of power-off resets in its spare area. The controller compares these counters to determine whether a given page went through a sudden power loss.",
+        "rank": 1,
+        "domain": 0.6754,
+        "domainSignals": {
+          "commonTermRatio": 0.7826,
+          "topDensity": 0.5145,
+          "bestBm25": 98.907,
+          "commonTermsMatched": 18,
+          "totalQueryTerms": 23,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.4552,
+        "top1Pub": "US20160224089A1"
+      },
+      {
+        "pub": "US20170193421A1",
+        "title": "Work Flow Schedule Reconciliation And Data Push",
+        "cpc_group": "G06Q",
+        "text": "A bank branch tool detects what a customer needs and proposes appointments with the right expert. It looks at the office workflow and at which specialists are free. The customer can then pick a meeting slot with a specialist able to solve the request.",
+        "rank": 1,
+        "domain": 0.6274,
+        "domainSignals": {
+          "commonTermRatio": 0.8095,
+          "topDensity": 0.3542,
+          "bestBm25": 68.863,
+          "commonTermsMatched": 17,
+          "totalQueryTerms": 21,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3663,
+        "top1Pub": "US20170193421A1"
+      },
+      {
+        "pub": "US20170023990A1",
+        "title": "Electronic Apparatus",
+        "cpc_group": "G06F",
+        "text": "A server chassis groups an adapter board, a PCIe expansion card and a cooling fan into a single input/output module. The module talks to the rest of the machine through the adapter board. This layout frees space so more components fit in a limited enclosure.",
+        "rank": 1,
+        "domain": 0.6335,
+        "domainSignals": {
+          "commonTermRatio": 0.8,
+          "topDensity": 0.3839,
+          "bestBm25": 77.956,
+          "commonTermsMatched": 20,
+          "totalQueryTerms": 25,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3781,
+        "top1Pub": "US20170023990A1"
+      }
+    ],
+    "oodCases": [
+      {
+        "id": "dev-ood-1",
+        "text": "A pharmaceutical tablet combines a low dose of aspirin with a magnesium coating that protects the stomach lining during long term treatment of cardiovascular patients.",
+        "domain": 0.45,
+        "domainSignals": {
+          "commonTermRatio": 0.5882,
+          "topDensity": 0.2426,
+          "bestBm25": 42.587,
+          "commonTermsMatched": 10,
+          "totalQueryTerms": 17,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "dev-ood-2",
+        "text": "A folding bicycle frame made of carbon fibre with a hinge at the seat tube that locks with a quick release lever and folds the wheels side by side.",
+        "domain": 0.2806,
+        "domainSignals": {
+          "commonTermRatio": 0.3571,
+          "topDensity": 0.1658,
+          "bestBm25": 26.946,
+          "commonTermsMatched": 5,
+          "totalQueryTerms": 14,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "dev-ood-3",
+        "text": "A fertilizer granule coated with a biodegradable polymer releases nitrogen slowly into the soil over one growing season for wheat and corn crops.",
+        "domain": 0.1827,
+        "domainSignals": {
+          "commonTermRatio": 0.1429,
+          "topDensity": 0.2425,
+          "bestBm25": 46.759,
+          "commonTermsMatched": 2,
+          "totalQueryTerms": 14,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "dev-ood-4",
+        "text": "A concrete mix with recycled glass powder replaces part of the cement, reducing carbon emissions while keeping compressive strength for building foundations.",
+        "domain": 0.314,
+        "domainSignals": {
+          "commonTermRatio": 0.4375,
+          "topDensity": 0.1289,
+          "bestBm25": 22.694,
+          "commonTermsMatched": 7,
+          "totalQueryTerms": 16,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "dev-ood-5",
+        "text": "A running shoe has a midsole of expanded foam with a curved carbon plate that returns energy to the athlete at each stride.",
+        "domain": 0.3858,
+        "domainSignals": {
+          "commonTermRatio": 0.5,
+          "topDensity": 0.2146,
+          "bestBm25": 28.84,
+          "commonTermsMatched": 6,
+          "totalQueryTerms": 12,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "dev-ood-6",
+        "text": "A coffee machine boiler uses a double wall of stainless steel with a ceramic insulating layer to keep water at a stable brewing temperature.",
+        "domain": 0.3926,
+        "domainSignals": {
+          "commonTermRatio": 0.5625,
+          "topDensity": 0.1377,
+          "bestBm25": 24.883,
+          "commonTermsMatched": 9,
+          "totalQueryTerms": 16,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "dev-ood-7",
+        "text": "A wind turbine blade has serrated trailing edges made of flexible rubber that reduce aerodynamic noise at high rotation speed.",
+        "domain": 0.3736,
+        "domainSignals": {
+          "commonTermRatio": 0.5,
+          "topDensity": 0.1841,
+          "bestBm25": 27.471,
+          "commonTermsMatched": 7,
+          "totalQueryTerms": 14,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "dev-ood-8",
+        "text": "A cosmetic cream contains hyaluronic acid and vitamin C in an oil-in-water emulsion that hydrates the skin and reduces fine wrinkles.",
+        "domain": 0.2694,
+        "domainSignals": {
+          "commonTermRatio": 0.3571,
+          "topDensity": 0.1377,
+          "bestBm25": 24.629,
+          "commonTermsMatched": 5,
+          "totalQueryTerms": 14,
+          "threshold": 0.47
+        },
+        "refused": true
+      }
+    ]
+  },
+  "test": {
+    "split": "test",
+    "n": 20,
+    "top1": 16,
+    "top5": 19,
+    "top20": 19,
+    "mrr": 0.8542,
+    "avgQueryMs": 0.44,
+    "threshold": 0.47,
+    "inDomainAccepted": 20,
+    "inDomainTotal": 20,
+    "oodRefused": 9,
+    "oodTotal": 10,
+    "inDomainScores": [
+      0.5802,
+      0.6012,
+      0.6032,
+      0.6201,
+      0.628,
+      0.6346,
+      0.6465,
+      0.6568,
+      0.6586,
+      0.6747,
+      0.6817,
+      0.6967,
+      0.7131,
+      0.7132,
+      0.7144,
+      0.7367,
+      0.7547,
+      0.8411,
+      0.8544,
+      0.9042
+    ],
+    "oodScores": [
+      0.1948,
+      0.1968,
+      0.2518,
+      0.254,
+      0.2727,
+      0.2943,
+      0.3036,
+      0.3134,
+      0.3136,
+      0.5094
+    ],
+    "cases": [
+      {
+        "pub": "US20160195945A1",
+        "title": "User Interaction Device",
+        "cpc_group": "G06F",
+        "text": "A digital stylus has a long body with an inner frame holding an electrical switch. The writing tip can slide along the pen axis, and pressing it on a surface pushes it back to close the switch contacts.",
+        "rank": 4,
+        "domain": 0.7367,
+        "domainSignals": {
+          "commonTermRatio": 1,
+          "topDensity": 0.3419,
+          "bestBm25": 55.825,
+          "commonTermsMatched": 21,
+          "totalQueryTerms": 21,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.4514,
+        "top1Pub": "US20160195944A1"
+      },
+      {
+        "pub": "US20160358373A1",
+        "title": "Tessellation Method",
+        "cpc_group": "G06T",
+        "text": "A graphics pipeline splits a four-cornered surface patch into triangles for rendering. It checks a level-of-detail factor at each corner against a limit. If none is above the limit the patch is cut into a few triangles, otherwise it keeps subdividing recursively.",
+        "rank": 1,
+        "domain": 0.628,
+        "domainSignals": {
+          "commonTermRatio": 0.8261,
+          "topDensity": 0.3307,
+          "bestBm25": 73.287,
+          "commonTermsMatched": 19,
+          "totalQueryTerms": 23,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.4601,
+        "top1Pub": "US20160358373A1"
+      },
+      {
+        "pub": "US20160163089A1",
+        "title": "Graphical Data Representation",
+        "cpc_group": "G06T",
+        "text": "A renderer builds an image from stored decimal numbers and stored whole numbers. It reads the integer values, then reads the floating point values that were derived from each of them, and uses both to draw the graphical data.",
+        "rank": 1,
+        "domain": 0.7132,
+        "domainSignals": {
+          "commonTermRatio": 0.8421,
+          "topDensity": 0.5197,
+          "bestBm25": 68.84,
+          "commonTermsMatched": 16,
+          "totalQueryTerms": 19,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3712,
+        "top1Pub": "US20160163089A1"
+      },
+      {
+        "pub": "US20170032132A1",
+        "title": "Secure Input/Output Device Management",
+        "cpc_group": "G06F",
+        "text": "A chip creates a protected execution enclave for sensitive software. Its input/output controller contains a built-in trusted peripheral that is assigned to the enclave, so that data going to and from the peripheral cannot be read by the rest of the machine.",
+        "rank": 1,
+        "domain": 0.6201,
+        "domainSignals": {
+          "commonTermRatio": 0.9048,
+          "topDensity": 0.1932,
+          "bestBm25": 31.352,
+          "commonTermsMatched": 19,
+          "totalQueryTerms": 21,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3554,
+        "top1Pub": "US20170032132A1"
+      },
+      {
+        "pub": "US20170220930A1",
+        "title": "Automatic Problem Assessment In Machine Learning System",
+        "cpc_group": "G06N",
+        "text": "A diagnostic tool inspects a machine learning pipeline, looking at the training code and the data it learns from. It estimates what is likely to go wrong in the model, such as a data or learning issue, and reports the potential problem to the developer.",
+        "rank": 1,
+        "domain": 0.6817,
+        "domainSignals": {
+          "commonTermRatio": 0.85,
+          "topDensity": 0.4293,
+          "bestBm25": 68.79,
+          "commonTermsMatched": 17,
+          "totalQueryTerms": 20,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.2994,
+        "top1Pub": "US20170220930A1"
+      },
+      {
+        "pub": "US20160132354A1",
+        "title": "Application Scheduling In Heterogeneous Multiprocessor Computing Platforms",
+        "cpc_group": "G06F",
+        "text": "A chip contains different kinds of processor cores. Hardware counters track how fast each core runs a program and how much power it uses. Using these records, the processor chooses which core should run each application.",
+        "rank": 1,
+        "domain": 0.6967,
+        "domainSignals": {
+          "commonTermRatio": 0.9444,
+          "topDensity": 0.3251,
+          "bestBm25": 40.908,
+          "commonTermsMatched": 17,
+          "totalQueryTerms": 18,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3532,
+        "top1Pub": "US20160132354A1"
+      },
+      {
+        "pub": "US20160117729A1",
+        "title": "Method And Apparatus For Providing Search Capability And Targeted Advertising For Audio, Image, And Video Content Over The Internet",
+        "cpc_group": "G06Q",
+        "text": "A web service analyses the actual content of podcasts, images and videos. From what is said or shown in the file, it makes the media searchable and picks advertisements that match the content.",
+        "rank": 1,
+        "domain": 0.6012,
+        "domainSignals": {
+          "commonTermRatio": 0.7333,
+          "topDensity": 0.403,
+          "bestBm25": 45.359,
+          "commonTermsMatched": 11,
+          "totalQueryTerms": 15,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3955,
+        "top1Pub": "US20160117729A1"
+      },
+      {
+        "pub": "US20160217360A1",
+        "title": "Methods And Devices For Processing Information Card",
+        "cpc_group": "G06K",
+        "text": "On a phone, a digital wallet card can be handled by an app other than the one that issued it. A first app sends an instruction to a second app that is able to process the card, and the second app then carries out the operation on the card.",
+        "rank": 0,
+        "domain": 0.7547,
+        "domainSignals": {
+          "commonTermRatio": 1,
+          "topDensity": 0.3869,
+          "bestBm25": 42.332,
+          "commonTermsMatched": 14,
+          "totalQueryTerms": 14,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.5153,
+        "top1Pub": "US20170193499A1"
+      },
+      {
+        "pub": "US20160171174A1",
+        "title": "System And Methods For Managing Congestive Heart Failure",
+        "cpc_group": "G06F",
+        "text": "A healthcare platform helps avoid flare-ups in patients with heart failure. It finds at-risk patients, checks whether they take the right heart medicines, follows their weight over time and collects vital signs and lab results so doctors can step up treatment.",
+        "rank": 1,
+        "domain": 0.5802,
+        "domainSignals": {
+          "commonTermRatio": 0.7407,
+          "topDensity": 0.3393,
+          "bestBm25": 80.679,
+          "commonTermsMatched": 20,
+          "totalQueryTerms": 27,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3928,
+        "top1Pub": "US20160171174A1"
+      },
+      {
+        "pub": "US20170213236A1",
+        "title": "Estimation Of Causal Impact Of Digital Marketing Content",
+        "cpc_group": "G06Q",
+        "text": "An analytics tool measures how much one piece of online marketing really changed a customer's decision. It compares the sequence of ads shown to one group of users with a constructed sequence that leaves out that ad, to estimate the causal effect.",
+        "rank": 1,
+        "domain": 0.6346,
+        "domainSignals": {
+          "commonTermRatio": 0.875,
+          "topDensity": 0.2741,
+          "bestBm25": 48.708,
+          "commonTermsMatched": 21,
+          "totalQueryTerms": 24,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3197,
+        "top1Pub": "US20170213236A1"
+      },
+      {
+        "pub": "US20160247300A1",
+        "title": "Control Method Of Information Terminal And Recording Medium",
+        "cpc_group": "G06T",
+        "text": "A radiology workstation shows doctors similar medical images retrieved from a database of past cases. When the doctor changes how many similar images to display, the size of each image area on the screen is adjusted automatically.",
+        "rank": 1,
+        "domain": 0.7131,
+        "domainSignals": {
+          "commonTermRatio": 0.8333,
+          "topDensity": 0.5328,
+          "bestBm25": 74.257,
+          "commonTermsMatched": 15,
+          "totalQueryTerms": 18,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.4447,
+        "top1Pub": "US20160247300A1"
+      },
+      {
+        "pub": "US20170221164A1",
+        "title": "Determining Course Need Based On Member Data",
+        "cpc_group": "G06Q",
+        "text": "A professional network decides which online courses are missing. For each skill it scores how interested members are and how much employers want it, counts the courses already available, and works out where new learning content is needed.",
+        "rank": 1,
+        "domain": 0.6747,
+        "domainSignals": {
+          "commonTermRatio": 0.8182,
+          "topDensity": 0.4595,
+          "bestBm25": 80.046,
+          "commonTermsMatched": 18,
+          "totalQueryTerms": 22,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.4644,
+        "top1Pub": "US20170221164A1"
+      },
+      {
+        "pub": "US20160116965A1",
+        "title": "Dynamic Core Selection For Heterogeneous Multi-Core Systems",
+        "cpc_group": "G06F",
+        "text": "A multi-core processor moves a running program between a big and a small core. It wakes a second core, measures the performance of the first, and if the first core is doing better than a known benchmark it powers the second core back down.",
+        "rank": 3,
+        "domain": 0.6465,
+        "domainSignals": {
+          "commonTermRatio": 0.7778,
+          "topDensity": 0.4496,
+          "bestBm25": 65.455,
+          "commonTermsMatched": 14,
+          "totalQueryTerms": 18,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.4014,
+        "top1Pub": "US20160116963A1"
+      },
+      {
+        "pub": "US20160132701A1",
+        "title": "Multi-Purpose Credit Card Reader Apparatus",
+        "cpc_group": "G06K",
+        "text": "A thin pocket gadget holds several bank cards inside a shielded case. It reads and stores the data of each credit card, then uses an RFID chip to broadcast only the card the owner selects, protecting the others from wireless skimming.",
+        "rank": 1,
+        "domain": 0.6586,
+        "domainSignals": {
+          "commonTermRatio": 0.875,
+          "topDensity": 0.334,
+          "bestBm25": 68.727,
+          "commonTermsMatched": 21,
+          "totalQueryTerms": 24,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.2904,
+        "top1Pub": "US20160132701A1"
+      },
+      {
+        "pub": "US20160210054A1",
+        "title": "Managing Meta-Data In An Object Memory Fabric",
+        "cpc_group": "G06F",
+        "text": "A cluster of hardware nodes shares one memory fabric. Memory objects are created and managed directly by the memory modules instead of by the operating system, and each object carries metadata used to manage it across the nodes.",
+        "rank": 2,
+        "domain": 0.9042,
+        "domainSignals": {
+          "commonTermRatio": 1,
+          "topDensity": 0.7605,
+          "bestBm25": 73.409,
+          "commonTermsMatched": 16,
+          "totalQueryTerms": 16,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.6725,
+        "top1Pub": "US20160210082A1"
+      },
+      {
+        "pub": "US20160195944A1",
+        "title": "Touch Down Detection With A Stylus",
+        "cpc_group": "G06F",
+        "text": "An electronic pen measures how hard its tip presses on a screen. It stores two pressure thresholds in memory, and uses them to decide whether the pen is up or down, avoiding false touches around the moment of contact.",
+        "rank": 1,
+        "domain": 0.7144,
+        "domainSignals": {
+          "commonTermRatio": 0.9091,
+          "topDensity": 0.4224,
+          "bestBm25": 66.286,
+          "commonTermsMatched": 20,
+          "totalQueryTerms": 22,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.4267,
+        "top1Pub": "US20160195944A1"
+      },
+      {
+        "pub": "US20160154420A1",
+        "title": "Time Synchronization System",
+        "cpc_group": "G06F",
+        "text": "A controller sets the clock of a remote terminal. It computes a preset time from its own real-time clock, and the terminal waits for a calculated delay before loading that time, so that both clocks end up synchronized.",
+        "rank": 1,
+        "domain": 0.8411,
+        "domainSignals": {
+          "commonTermRatio": 1,
+          "topDensity": 0.6027,
+          "bestBm25": 74.937,
+          "commonTermsMatched": 19,
+          "totalQueryTerms": 19,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.475,
+        "top1Pub": "US20160154420A1"
+      },
+      {
+        "pub": "US20160139885A1",
+        "title": "Systems And Methods For Scaling A Cloud Infrastructure",
+        "cpc_group": "G06F",
+        "text": "A cloud management tool watches server metrics and application metrics. It estimates how the application behaves, then decides on its own how many resources to add or remove and tells the cloud provider to carry out the scaling.",
+        "rank": 1,
+        "domain": 0.6568,
+        "domainSignals": {
+          "commonTermRatio": 0.85,
+          "topDensity": 0.3671,
+          "bestBm25": 58.821,
+          "commonTermsMatched": 17,
+          "totalQueryTerms": 20,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3611,
+        "top1Pub": "US20160139885A1"
+      },
+      {
+        "pub": "US20160117150A1",
+        "title": "Code Validation Using Content Assist",
+        "cpc_group": "G06F",
+        "text": "While a programmer writes code in an IDE, the autocomplete menu offers functions that can be checked. When the developer selects one, the tool runs it and validates the result it generates before the code is accepted.",
+        "rank": 1,
+        "domain": 0.6032,
+        "domainSignals": {
+          "commonTermRatio": 0.7778,
+          "topDensity": 0.3412,
+          "bestBm25": 48.976,
+          "commonTermsMatched": 14,
+          "totalQueryTerms": 18,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.3672,
+        "top1Pub": "US20160117150A1"
+      },
+      {
+        "pub": "US20160202911A1",
+        "title": "Efficient Storage Tiering",
+        "cpc_group": "G06F",
+        "text": "A storage system moves data from one tier to another efficiently. It cuts an object into segments, checks which segments the destination tier does not already have, writes only those, and then deletes the object from the original tier.",
+        "rank": 1,
+        "domain": 0.8544,
+        "domainSignals": {
+          "commonTermRatio": 1,
+          "topDensity": 0.636,
+          "bestBm25": 67.706,
+          "commonTermsMatched": 14,
+          "totalQueryTerms": 14,
+          "threshold": 0.47
+        },
+        "bestCoverage": 0.7132,
+        "top1Pub": "US20160202911A1"
+      }
+    ],
+    "oodCases": [
+      {
+        "id": "test-ood-1",
+        "text": "A vaccine formulation uses lipid nanoparticles to deliver messenger RNA encoding a viral spike protein, stabilized with sucrose for storage in a standard refrigerator.",
+        "domain": 0.254,
+        "domainSignals": {
+          "commonTermRatio": 0.3529,
+          "topDensity": 0.1056,
+          "bestBm25": 21.824,
+          "commonTermsMatched": 6,
+          "totalQueryTerms": 17,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "test-ood-2",
+        "text": "A motorcycle helmet shell made of aramid fibres with an inner layer of energy-absorbing foam that crumples during an impact to protect the skull.",
+        "domain": 0.2943,
+        "domainSignals": {
+          "commonTermRatio": 0.4,
+          "topDensity": 0.1359,
+          "bestBm25": 24.374,
+          "commonTermsMatched": 6,
+          "totalQueryTerms": 15,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "test-ood-3",
+        "text": "A hydraulic excavator arm has a reinforced steel joint with a sealed bushing that keeps grease in place and limits wear in muddy conditions.",
+        "domain": 0.3134,
+        "domainSignals": {
+          "commonTermRatio": 0.4,
+          "topDensity": 0.1834,
+          "bestBm25": 33.246,
+          "commonTermsMatched": 6,
+          "totalQueryTerms": 15,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "test-ood-4",
+        "text": "A glass bottle for sparkling wine has a thicker base and a new cork retaining ring that holds internal pressure during transport.",
+        "domain": 0.5094,
+        "domainSignals": {
+          "commonTermRatio": 0.6667,
+          "topDensity": 0.2735,
+          "bestBm25": 42.62,
+          "commonTermsMatched": 10,
+          "totalQueryTerms": 15,
+          "threshold": 0.47
+        },
+        "refused": false
+      },
+      {
+        "id": "test-ood-5",
+        "text": "A dental implant screw made of titanium has a porous surface that encourages the jawbone to grow around it after surgery.",
+        "domain": 0.1948,
+        "domainSignals": {
+          "commonTermRatio": 0.25,
+          "topDensity": 0.112,
+          "bestBm25": 16.138,
+          "commonTermsMatched": 3,
+          "totalQueryTerms": 12,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "test-ood-6",
+        "text": "A solar water heater on a roof uses copper tubes inside a vacuum glass cylinder to absorb heat and warm a storage tank.",
+        "domain": 0.2727,
+        "domainSignals": {
+          "commonTermRatio": 0.375,
+          "topDensity": 0.1192,
+          "bestBm25": 21.697,
+          "commonTermsMatched": 6,
+          "totalQueryTerms": 16,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "test-ood-7",
+        "text": "A baby stroller has a one-hand folding mechanism with a spring latch and rear wheels with a foot-operated parking brake.",
+        "domain": 0.1968,
+        "domainSignals": {
+          "commonTermRatio": 0.2308,
+          "topDensity": 0.1458,
+          "bestBm25": 21.246,
+          "commonTermsMatched": 3,
+          "totalQueryTerms": 13,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "test-ood-8",
+        "text": "A biodegradable food packaging film is made from seaweed extract and plant starch, plasticized with glycerol to remain flexible.",
+        "domain": 0.3036,
+        "domainSignals": {
+          "commonTermRatio": 0.4167,
+          "topDensity": 0.134,
+          "bestBm25": 19.609,
+          "commonTermsMatched": 5,
+          "totalQueryTerms": 12,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "test-ood-9",
+        "text": "A diesel engine piston has a ceramic-coated crown and an oil cooling gallery that lowers operating temperature under heavy load.",
+        "domain": 0.3136,
+        "domainSignals": {
+          "commonTermRatio": 0.4286,
+          "topDensity": 0.1411,
+          "bestBm25": 22.07,
+          "commonTermsMatched": 6,
+          "totalQueryTerms": 14,
+          "threshold": 0.47
+        },
+        "refused": true
+      },
+      {
+        "id": "test-ood-10",
+        "text": "A garden irrigation valve made of brass opens with a mechanical float when the water level in a rain barrel rises.",
+        "domain": 0.2518,
+        "domainSignals": {
+          "commonTermRatio": 0.3333,
+          "topDensity": 0.1294,
+          "bestBm25": 20.367,
+          "commonTermsMatched": 4,
+          "totalQueryTerms": 12,
+          "threshold": 0.47
+        },
+        "refused": true
+      }
+    ]
+  }
+}
