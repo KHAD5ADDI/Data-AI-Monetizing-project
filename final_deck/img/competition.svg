@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="Inter, -apple-system, 'Helvetica Neue', Arial, sans-serif">
+<rect x="1" y="1" width="1198" height="758" rx="22" fill="#fffdf8" stroke="#d8d4c8" stroke-width="2"/>
+<text x="44.0" y="62.0" font-size="21" fill="#6c6a62" font-weight="700" text-anchor="start" letter-spacing="1.5">POSITIONING MAP · TEAM ASSESSMENT</text>
+<rect x="122.0" y="101.0" width="390.0" height="190.0" rx="16" fill="#fff4c7" stroke="#d9b63c" stroke-dasharray="8 6" stroke-width="2"/>
+<text x="144.0" y="141.0" font-size="21" fill="#7c6412" font-weight="700" text-anchor="start" letter-spacing="1.5">OUR WEDGE</text>
+<path d="M110 95 V650 H1150" stroke="#6c6a62" stroke-width="2" fill="none"/>
+<text x="630.0" y="692.0" font-size="25" fill="#6c6a62" font-weight="600" text-anchor="middle" >Price and set-up effort →</text>
+<text x="0.0" y="0.0" font-size="25" fill="#6c6a62" font-weight="600" text-anchor="middle" transform="translate(68 372.5) rotate(-90)">Claim-by-claim depth →</text>
+<circle cx="165" cy="215" r="17" fill="#25507a"/>
+<text x="197.0" y="228.0" font-size="38" fill="#15150f" font-weight="800" text-anchor="start" >Verbatim</text>
+<circle cx="760" cy="150" r="11" fill="#a7a498"/>
+<text x="784.0" y="160.0" font-size="28" fill="#44433c" font-weight="500" text-anchor="start" >Patlytics</text>
+<circle cx="760" cy="215" r="11" fill="#a7a498"/>
+<text x="784.0" y="225.0" font-size="28" fill="#44433c" font-weight="500" text-anchor="start" >Solve Intelligence</text>
+<circle cx="500" cy="375" r="11" fill="#a7a498"/>
+<text x="524.0" y="385.0" font-size="28" fill="#44433c" font-weight="500" text-anchor="start" >Amplified</text>
+<circle cx="760" cy="400" r="11" fill="#a7a498"/>
+<text x="784.0" y="410.0" font-size="28" fill="#44433c" font-weight="500" text-anchor="start" >Patsnap, Questel, Derwent</text>
+<circle cx="760" cy="465" r="11" fill="#a7a498"/>
+<text x="784.0" y="475.0" font-size="28" fill="#44433c" font-weight="500" text-anchor="start" >IPRally</text>
+<circle cx="165" cy="585" r="11" fill="#a7a498"/>
+<text x="189.0" y="595.0" font-size="28" fill="#44433c" font-weight="500" text-anchor="start" >Google Patents, Lens</text>
+<text x="44.0" y="728.0" font-size="20" fill="#6c6a62" font-weight="400" text-anchor="start" >Illustrative · Patlytics, Solve and full platforms publish no price</text></svg>

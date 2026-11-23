@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="Inter, -apple-system, 'Helvetica Neue', Arial, sans-serif">
+<rect x="1" y="1" width="1198" height="758" rx="22" fill="#fffdf8" stroke="#d8d4c8" stroke-width="2"/>
+<text x="44.0" y="62.0" font-size="21" fill="#6c6a62" font-weight="700" text-anchor="start" letter-spacing="1.5">PER SEAT, PER MONTH · €</text>
+<text x="44.0" y="130.0" font-size="29" fill="#15150f" font-weight="600" text-anchor="start" >Price we charge</text>
+<rect x="44.0" y="146.0" width="220.0" height="62.0" rx="8" fill="#25507a" />
+<text x="280.0" y="190.0" font-size="36" fill="#15150f" font-weight="800" text-anchor="start" >€200</text>
+<text x="44.0" y="280.0" font-size="29" fill="#15150f" font-weight="600" text-anchor="start" >Value in year 1, at 40% adoption</text>
+<rect x="44.0" y="296.0" width="352.0" height="62.0" rx="8" fill="#8fadc9" />
+<text x="412.0" y="340.0" font-size="36" fill="#15150f" font-weight="800" text-anchor="start" >€320</text>
+<text x="44.0" y="430.0" font-size="29" fill="#15150f" font-weight="600" text-anchor="start" >Value at full use, 4 h saved</text>
+<rect x="44.0" y="446.0" width="880.0" height="62.0" rx="8" fill="#cfdbe7" />
+<text x="940.0" y="490.0" font-size="36" fill="#15150f" font-weight="800" text-anchor="start" >€800</text>
+<rect x="44.0" y="590.0" width="1112.0" height="84.0" rx="14" fill="#eaf0f6" />
+<text x="70" y="642" font-size="28" fill="#1d3f61"><tspan font-weight="700">1 hour at €200</tspan> covers one month of the seat.</text>
+<text x="44.0" y="728.0" font-size="20" fill="#6c6a62" font-weight="400" text-anchor="start" >Assumes 4 h saved a month at €200 an hour, not measured yet</text></svg>

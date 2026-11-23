@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="Inter, -apple-system, 'Helvetica Neue', Arial, sans-serif">
+<rect x="1" y="1" width="1198" height="758" rx="22" fill="#fffdf8" stroke="#d8d4c8" stroke-width="2"/>
+<text x="44.0" y="62.0" font-size="21" fill="#6c6a62" font-weight="700" text-anchor="start" letter-spacing="1.5">BOTTOM-UP MARKET · CIRCLES TO SCALE</text>
+<circle cx="345" cy="385" r="305" fill="#e7edf3"/>
+<circle cx="345" cy="620.0" r="70.0" fill="#8fadc9"/>
+<circle cx="345" cy="658.9" r="31.1" fill="#25507a"/>
+<path d="M583 196 L690 156" stroke="#6c6a62" stroke-width="2" fill="none"/>
+<circle cx="583" cy="196" r="5" fill="#6c6a62"/>
+<text x="705.0" y="140.0" font-size="23" fill="#6c6a62" font-weight="700" text-anchor="start" >TAM · Europe</text>
+<text x="705.0" y="196.0" font-size="58" fill="#15150f" font-weight="800" text-anchor="start" >€34.6M</text>
+<text x="705.0" y="232.0" font-size="25" fill="#6c6a62" font-weight="400" text-anchor="start" >14,400 patent attorneys</text>
+<path d="M401 578 L690 361" stroke="#3f6f9b" stroke-width="2" fill="none"/>
+<circle cx="401" cy="578" r="5" fill="#3f6f9b"/>
+<text x="705.0" y="345.0" font-size="23" fill="#3f6f9b" font-weight="700" text-anchor="start" >SAM · France</text>
+<text x="705.0" y="401.0" font-size="58" fill="#15150f" font-weight="800" text-anchor="start" >€1.8M</text>
+<text x="705.0" y="437.0" font-size="25" fill="#6c6a62" font-weight="400" text-anchor="start" >758 patent-qualified attorneys</text>
+<path d="M376 659 L690 566" stroke="#25507a" stroke-width="2" fill="none"/>
+<circle cx="376" cy="659" r="5" fill="#25507a"/>
+<text x="705.0" y="550.0" font-size="23" fill="#25507a" font-weight="700" text-anchor="start" >SOM · Year 3</text>
+<text x="705.0" y="606.0" font-size="58" fill="#15150f" font-weight="800" text-anchor="start" >€360k</text>
+<text x="705.0" y="642.0" font-size="25" fill="#6c6a62" font-weight="400" text-anchor="start" >30 firms × 5 seats</text></svg>

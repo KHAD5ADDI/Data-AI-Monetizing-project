@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="Inter, -apple-system, 'Helvetica Neue', Arial, sans-serif">
+<rect x="1" y="1" width="1198" height="758" rx="22" fill="#fffdf8" stroke="#d8d4c8" stroke-width="2"/>
+<text x="44.0" y="62.0" font-size="21" fill="#6c6a62" font-weight="700" text-anchor="start" letter-spacing="1.5">USE OF FUNDS · €250k · TEAM PROPOSAL</text>
+<text x="44.0" y="145.0" font-size="29" fill="#15150f" font-weight="600" text-anchor="start" >Product and data</text>
+<rect x="470.0" y="105.0" width="500.0" height="62.0" rx="8" fill="#25507a" />
+<text x="986.0" y="149.0" font-size="34" fill="#15150f" font-weight="800" text-anchor="start" >€112.5k</text>
+<text x="44.0" y="261.0" font-size="29" fill="#15150f" font-weight="600" text-anchor="start" >Paid pilots with firms</text>
+<rect x="470.0" y="221.0" width="277.8" height="62.0" rx="8" fill="#25507a" />
+<text x="763.8" y="265.0" font-size="34" fill="#15150f" font-weight="800" text-anchor="start" >€62.5k</text>
+<text x="44.0" y="377.0" font-size="29" fill="#15150f" font-weight="600" text-anchor="start" >Data licences, hosting, AI</text>
+<rect x="470.0" y="337.0" width="111.1" height="62.0" rx="8" fill="#cfdbe7" />
+<text x="597.1" y="381.0" font-size="34" fill="#15150f" font-weight="800" text-anchor="start" >€25k</text>
+<text x="44.0" y="493.0" font-size="29" fill="#15150f" font-weight="600" text-anchor="start" >Legal and confidentiality</text>
+<rect x="470.0" y="453.0" width="111.1" height="62.0" rx="8" fill="#cfdbe7" />
+<text x="597.1" y="497.0" font-size="34" fill="#15150f" font-weight="800" text-anchor="start" >€25k</text>
+<text x="44.0" y="609.0" font-size="29" fill="#15150f" font-weight="600" text-anchor="start" >Reserve</text>
+<rect x="470.0" y="569.0" width="111.1" height="62.0" rx="8" fill="#cfdbe7" />
+<text x="597.1" y="613.0" font-size="34" fill="#15150f" font-weight="800" text-anchor="start" >€25k</text></svg>

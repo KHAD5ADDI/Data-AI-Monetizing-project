@@ -1,0 +1,24 @@
+{
+ "pub": "US20170213184A1",
+ "title": "Food Inventory System And Method",
+ "rows": [
+  {
+   "num": 1,
+   "status": "partial",
+   "quote": "receive input in a computing device a “Today's Recipe” selection, wherein the “Today's Recipe” selection prompts display of a table listing suggested",
+   "cut": true
+  },
+  {
+   "num": 4,
+   "status": "partial",
+   "quote": "The non-transitory computer readable storage medium of claim 1, wherein the table listing food inventory items may be sortable by details, comprising",
+   "cut": true
+  },
+  {
+   "num": 8,
+   "status": "partial",
+   "quote": "The non-transitory computer readable storage medium of claim 1, wherein the table listing suggested recipes may be configured to create a shopping",
+   "cut": true
+  }
+ ]
+}

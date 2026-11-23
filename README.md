@@ -32,6 +32,14 @@ An AI assistant that finds the 5 closest patents to an invention and compares th
 > ```
 > View or rebuild the pitch deck: `cd deck && npm install && npm run dev`.
 
+## Final submission
+
+* **Live proof of concept:** <https://claude.ai/artifact/XYT8MK4kuZvPKGPrCtyZTg>
+* **Final pitch deck:** [`final_deck/Verbatim_Pitch_Deck.pdf`](final_deck/Verbatim_Pitch_Deck.pdf)
+* **Browser version of the PoC:** [`poc/shareable/`](poc/shareable/), with its benchmark and live test results
+
+The final deck takes precedence over the first-draft figures further down this page. In particular, the French SAM is EUR 1.8 M (1,131 attorneys, 67% patent-qualified), an INPI novelty search starts at EUR 774, and a live search costs an estimated USD 0.04.
+
 ## Table of contents
 
 1. [Project goal](#project-goal)
