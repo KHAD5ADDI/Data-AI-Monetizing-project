@@ -132,7 +132,7 @@ export function PatentInspector({
       </div>
 
       <div className="inspector__body">
-        {activeTab === 'claims' && <ClaimChartTab patent={patent} />}
+        {activeTab === 'claims' && <ClaimChartTab key={patent.pub} patent={patent} />}
         {activeTab === 'explainability' && (
           <ExplainabilityTab
             patent={patent}

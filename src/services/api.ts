@@ -232,6 +232,8 @@ export async function runPriorArtAnalysis({
         durationMs: Math.round(performance.now() - s0),
         detail: `Fallback (${code || 'error'})`,
       });
+      setStep('rerank', { status: 'skipped', detail: 'Skipped after AI fallback' });
+      setStep('analyze', { status: 'skipped', detail: 'Switched to BM25F claim extraction' });
     }
   }
 
@@ -312,6 +314,9 @@ export async function runPriorArtAnalysis({
       durationMs: Number((performance.now() - d0).toFixed(1)),
       detail: `Blocked (score ${found.domain.toFixed(2)} < ${E.OOD_THRESHOLD.toFixed(2)})`,
     });
+    setStep('rerank', { status: 'skipped', detail: 'Blocked by domain gate' });
+    setStep('analyze', { status: 'skipped', detail: 'Blocked by domain gate' });
+    setStep('guardrail', { status: 'skipped', detail: 'No claims analyzed' });
     return {
       mode: 'ood',
       invention,
@@ -371,6 +376,7 @@ export async function runPriorArtAnalysis({
       if (code && STOP_AI_CODES.has(code)) {
         aiFailed = true;
         notices.push({ level: 'warn', text: failureNotice(code) });
+        setStep('analyze', { status: 'skipped', detail: 'Switched to BM25F claim extraction' });
       } else {
         notices.push({
           level: 'warn',

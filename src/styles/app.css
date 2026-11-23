@@ -54,6 +54,18 @@ textarea:focus-visible {
   font-family: var(--font-mono);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
@@ -162,7 +174,7 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
-   Floating Minimal Header (no-quiz-no-prod DNA)
+   Floating Minimal Header
    ========================================================================== */
 .app-header {
   position: sticky;
@@ -1176,13 +1188,6 @@ textarea:focus-visible {
   margin-top: 4px;
   font-size: var(--text-xs);
   color: var(--ink-muted);
-}
-
-.claim-elements {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin-top: var(--space-1-5);
 }
 
 .claim-details {

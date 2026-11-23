@@ -1,4 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
+import {
+  ANALYSIS_MODEL_DEFAULT,
+  MIN_QUOTE_CHARS,
+  QUICK_MODEL_DEFAULT,
+} from '../../shared/engine.mjs';
 import type { ApiStatus, CorpusMeta, WorkspaceMode } from '../types';
 import { ResetIcon, ShieldCheckIcon } from './Icons';
 
@@ -157,15 +162,15 @@ export function Header({
               </div>
               <div className="api-popover__row">
                 <span>Quick model</span>
-                <span className="mono">{apiStatus?.models.quick ?? 'claude-haiku-5-5'}</span>
+                <span className="mono">{apiStatus?.models.quick ?? QUICK_MODEL_DEFAULT}</span>
               </div>
               <div className="api-popover__row">
                 <span>Analysis model</span>
-                <span className="mono">{apiStatus?.models.analysis ?? 'claude-sonnet-5-5'}</span>
+                <span className="mono">{apiStatus?.models.analysis ?? ANALYSIS_MODEL_DEFAULT}</span>
               </div>
               <div className="api-popover__row">
                 <span>Guardrail policy</span>
-                <span className="mono">Exact substring (&ge;12 chars)</span>
+                <span className="mono">Exact substring (&ge;{MIN_QUOTE_CHARS} chars)</span>
               </div>
             </div>
           </div>

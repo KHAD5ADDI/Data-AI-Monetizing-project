@@ -19,7 +19,6 @@ venv/
 
 # Raw patent download (rebuild with pipeline/prepare_data.py)
 data_raw/
-poc/data_raw/
 
 # Local archives and transient exports
 *.zip

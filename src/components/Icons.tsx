@@ -30,14 +30,6 @@ export function SearchIcon({ size = 15, className }: IconProps) {
   );
 }
 
-export function SparklesIcon({ size = 15, className }: IconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...base}>
-      <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z" />
-    </svg>
-  );
-}
-
 export function ExternalLinkIcon({ size = 13, className }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...base}>

@@ -55,10 +55,11 @@ export function App() {
   }, []);
 
   const executeSearch = useCallback(
-    async (overrideText?: string, force = false) => {
+    async (overrideText?: string, force = false, overrideCpcGroup?: string | null) => {
       if (!corpus) return;
       const queryText = (overrideText ?? text).trim();
       if (queryText.length < 20) return;
+      const activeCpc = overrideCpcGroup !== undefined ? overrideCpcGroup : cpcGroup;
 
       setRunning(true);
       setSelectedIdx(0);
@@ -69,7 +70,7 @@ export function App() {
           index: corpus.index,
           text: queryText,
           force,
-          cpcGroup,
+          cpcGroup: activeCpc,
           aiAvailable: Boolean(apiStatus?.available),
           onSteps: (next) => setSteps(next),
         });
@@ -97,7 +98,7 @@ export function App() {
       setCpcGroup(null);
       setText(queryText);
       if (corpus) {
-        void executeSearch(queryText, false);
+        void executeSearch(queryText, false, null);
       }
     },
     [corpus, executeSearch],
