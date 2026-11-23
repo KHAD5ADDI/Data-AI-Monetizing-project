@@ -18,9 +18,11 @@ FIXED, VARIABLE, ASK = [120, 200, 280], 0.10, 250
 BENCH_TOP5, BENCH_N, OOD_REFUSED, OOD_N = 18, 20, 9, 10
 
 # AI cost per screening (Anthropic list prices, USD per million tokens)
-# Tokens: mean of 4 live PoC searches, estimated at 4 characters per token
-TOKENS_IN, TOKENS_OUT, SONNET_IN, SONNET_OUT, SCREENINGS = 9_930, 2_145, 2, 10, 40
-LIVE_SECONDS = [19.0, 21.4, 21.5]  # clean live searches, 23 Nov 2026
+# Measured on 4 live searches on the public PoC, 23 Nov 2026 (real API token usage)
+LIVE_COSTS = [0.0518, 0.0357, 0.0463, 0.0393]
+LIVE_SECONDS = [23.5, 15.4, 19.1, 13.9]
+LIVE_QUOTES, LIVE_QUOTES_EXACT = 25, 25
+SCREENINGS = 40
 
 
 def forecast():
@@ -37,7 +39,7 @@ def metrics(data):
     patent_cpi = round(CPI * PATENT_MENTION / 100)
     value_year = HOURS * RATE * 12
     firm_arr = SEATS_PER_FIRM * SEAT_YEAR
-    ai_call = (TOKENS_IN * SONNET_IN + TOKENS_OUT * SONNET_OUT) / 1e6
+    ai_call = sum(LIVE_COSTS) / len(LIVE_COSTS)
     peak = -min(f["cum"])
     return {
         "seat_month": f"€{SEAT_MONTH}", "seat_year": f"€{SEAT_YEAR:,}",
@@ -55,7 +57,8 @@ def metrics(data):
         "peak": f"€{peak:.0f}k", "ask": f"€{ASK}k", "cushion": f"€{ASK - peak:.0f}k",
         "ai_call": f"${ai_call:.2f}", "ai_pct": round(ai_call * SCREENINGS / SEAT_MONTH * 100),
         "miss_multiple": round(275_000 / 3_000),
-        "live_min": int(min(LIVE_SECONDS)), "live_max": ceil(max(LIVE_SECONDS)),
+        "live_min": round(min(LIVE_SECONDS)), "live_max": round(max(LIVE_SECONDS)),
+        "live_quotes": LIVE_QUOTES, "live_quotes_exact": LIVE_QUOTES_EXACT,
         "bench_top5": BENCH_TOP5, "bench_n": BENCH_N, "bench_pct": round(BENCH_TOP5 / BENCH_N * 100),
         "ood_refused": OOD_REFUSED, "ood_n": OOD_N,
     }

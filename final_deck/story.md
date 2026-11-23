@@ -66,8 +66,8 @@ notes: |
   0:30 Prepared case: click Example: Anti-waste fridge, then Find prior art. Point at one highlighted quote.
   1:15 Say the field out loud: computing and data processing. Let the jury pick a computing invention. Run it live.
   2:15 Edge case: type a dental implant screw made of titanium. Show the out-of-domain refusal.
-  2:45 Read the response time and the estimated cost from the screen. Our clean live runs took 19 to 22 seconds and about 4 US cents.
-  Before the defence: sign in to Claude, open the PoC link and run one search so the consent prompt is already accepted. Test 5 inputs (2 easy, 2 tricky, 1 out of scope), and keep a backup laptop and a phone hotspot ready.
+  2:45 Read the response time and the estimated cost from the screen. Our live runs took 14 to 24 seconds and about 4 US cents.
+  Before the defence: open verbatim-prior-art.vercel.app and run one search. No account is needed. Test 5 inputs (2 easy, 2 tricky, 1 out of scope), keep a backup laptop and a phone hotspot ready, and check the API credit balance.
 visual:
   type: image
   source: claim_table
@@ -76,9 +76,9 @@ visual:
 
 **Output:** the 5 closest patents with the exact overlapping sentences, in **{{live_min}} to {{live_max}} seconds** (measured live).
 
-[Real:]{.g} 3,511 US patent applications, search and quote check. [Limited:]{.w} computing only, one month of filings (January 2016).
+[Real:]{.g} 3,511 US patent applications, AI comparison and quote check. [Limited:]{.w} computing only, one month of filings (January 2016).
 
-Live PoC: `claude.ai/artifact/XYT8MK4kuZvPKGPrCtyZTg`
+Live PoC: `verbatim-prior-art.vercel.app`
 
 ## A focused market: {{sam}} in France first, {{tam}} across Europe, {{som}} by year 3. {#market}
 ```yaml
@@ -134,7 +134,7 @@ visual:
     - {tag: "Switch", tone: orange, title: "Not proven yet", text: "Would firms leave their current tools? Our **top interview question**.", foot: "To test"}
     - {tag: "Degrade", tone: blue, title: "Costly without it", text: "A missed patent means an office action, or far worse.", foot: "Market evidence"}
 ```
-**Measured:** target patent in the top 5 on **{{bench_top5}} of {{bench_n}}** cases, and **{{ood_refused}} of {{ood_n}}** out-of-scope inventions refused.
+**Measured:** target patent in the top 5 on **{{bench_top5}} of {{bench_n}}** cases, **{{ood_refused}} of {{ood_n}}** out-of-scope inventions refused, and **{{live_quotes_exact}} of {{live_quotes}}** live quotes exact.
 
 **Next:** **10** outreach messages and **3** interviews.
 
@@ -187,14 +187,14 @@ role: preuve
 notes: |
   KHADIDJA · 1:40 · ends at 12:40
   Each firm brings 12,000 euros a year. After 10 percent variable costs, 10,800 remain. With 280,000 euros of fixed costs in year 3, we break even at 26 firms. We plan 30 by the end of year 3. The year-3 result is still negative because revenue is recognised through the year, so this is a run-rate break-even. The cumulative loss peaks at 222,000 euros.
-  AI should not be the main cost: our live searches cost an estimated 4 cents each on Sonnet 5.5, about 1 percent of the price. Token counts are estimated from text length.
+  AI should not be the main cost: four live searches cost between 3.6 and 5.2 US cents each from real API usage, about 1 percent of the price.
   Limits: no churn or discounts, and the cautious scenario would need 395,000 euros.
   If asked about pilots: the 62,500-euro pilot budget sits inside the 600,000 euros of fixed costs over three years. If it came on top, the peak loss would be 284,500 euros and our 250,000-euro ask would fall 34,500 euros short.
 visual: {type: image, source: pnl}
 ```
 Each firm brings **{{firm_arr}}** a year, with **{{margin_pct}}%** left after variable costs.
 
-AI costs an estimated **{{ai_call}}** per screening, roughly **{{ai_pct}}%** of the price.
+AI costs about **{{ai_call}}** per search (measured live), roughly **{{ai_pct}}%** of the price.
 
 [The cautious case would need €395k.]{.w}
 

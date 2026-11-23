@@ -137,4 +137,4 @@ for i, row in enumerate(demo["rows"]):
         body += [r(144, ly - 25, min(830, len(line) * 12.6 + 14), 33, HL, 5), t(151, ly, line + (" …" if row["cut"] and k == len(lines) - 1 else ""), 23, INK)]
     body += [r(1030, y + 22, 126, 38, "#f8e3c5", 19), t(1093, y + 48, row["status"].capitalize(), 20, "#8a5410", 700, "middle")]
 body += callout("Every highlighted quote is checked by code", "against the patent text.", 616)
-save("claim_table", "REAL POC OUTPUT · CLOSEST OF 5 PATENTS", body, "Keyword mode · long quotes are shortened with …")
+save("claim_table", "REAL POC OUTPUT · CLOSEST OF 5 PATENTS", body, "Live Claude analysis · long quotes are shortened with …")

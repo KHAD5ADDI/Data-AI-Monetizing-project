@@ -34,11 +34,11 @@ An AI assistant that finds the 5 closest patents to an invention and compares th
 
 ## Final submission
 
-* **Live proof of concept:** <https://claude.ai/artifact/XYT8MK4kuZvPKGPrCtyZTg>
+* **Live proof of concept:** <https://verbatim-prior-art.vercel.app> (no account needed)
 * **Final pitch deck:** [`final_deck/Verbatim_Pitch_Deck.pdf`](final_deck/Verbatim_Pitch_Deck.pdf)
-* **Browser version of the PoC:** [`poc/shareable/`](poc/shareable/), with its benchmark and live test results
+* **Deployed PoC code:** [`api/claude.js`](api/claude.js), [`public/`](public/) and [`poc/shareable/`](poc/shareable/), with the benchmark and live test results
 
-The final deck takes precedence over the first-draft figures further down this page. In particular, the French SAM is EUR 1.8 M (1,131 attorneys, 67% patent-qualified), an INPI novelty search starts at EUR 774, and a live search costs an estimated USD 0.04.
+The final deck takes precedence over the first-draft figures further down this page. In particular, the French SAM is EUR 1.8 M (1,131 attorneys, 67% patent-qualified), an INPI novelty search starts at EUR 774, and a live search costs about USD 0.04. The AI step has now been run and measured, and the PoC is deployed on Vercel.
 
 ## Table of contents
 
