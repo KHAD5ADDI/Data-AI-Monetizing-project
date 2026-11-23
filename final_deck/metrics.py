@@ -15,13 +15,13 @@ SEATS_PER_FIRM, TARGET_FIRMS = 5, [5, 15, 30]
 FIXED, VARIABLE, ASK = [120, 200, 280], 0.10, 250
 
 # PoC benchmark, held-out cases (poc/shareable/benchmark.mjs in the team repository)
-BENCH_TOP5, BENCH_N, OOD_REFUSED, OOD_N = 18, 20, 9, 10
+BENCH_TOP5, BENCH_N, OOD_REFUSED, OOD_N = 19, 20, 9, 10
 
 # AI cost per screening (Anthropic list prices, USD per million tokens)
 # Measured on 4 live searches on the public PoC, 23 Nov 2026 (real API token usage)
-LIVE_COSTS = [0.0518, 0.0357, 0.0463, 0.0393]
-LIVE_SECONDS = [23.5, 15.4, 19.1, 13.9]
-LIVE_QUOTES, LIVE_QUOTES_EXACT = 25, 25
+LIVE_COSTS = [0.0813, 0.0737, 0.0841, 0.0796]
+LIVE_SECONDS = [13.9, 10.4, 11.7, 10.9]
+LIVE_QUOTES, LIVE_QUOTES_EXACT = 57, 57
 SCREENINGS = 40
 
 

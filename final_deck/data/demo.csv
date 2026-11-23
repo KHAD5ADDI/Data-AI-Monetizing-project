@@ -1,0 +1,4 @@
+claim,quote,overlap
+Claim 1,prompts display of a table listing suggested recipes based on the food inventory list,Partial
+Claim 3,the captured image of the food inventory item is searched for in an image recognition API,Partial
+Claim 4,"number of days the food inventory item was stored, expiration date, and quantity of items",Partial
