@@ -1,0 +1,146 @@
+{
+ "_method": "Known-item retrieval test. Patents were drawn with a fixed random seed before any tuning. Each description paraphrases the patent as an inventor would explain it. A case passes when the source patent is in the top 5. This tests retrieval only: it is not a legal novelty opinion and no attorney validated it.",
+ "dev": [
+  {
+   "pub": "US20170091258A1",
+   "text": "A software network switch keeps its packet matching tables up to date without stopping traffic. Every forwarding rule is tagged with the span of table versions for which it remains valid. When an update arrives, new rules are added under a newer version while packets in flight keep using the old one."
+  },
+  {
+   "pub": "US20160162244A1",
+   "text": "A video player shows a 3D-looking cube on the screen. Each face of the cube plays the same scene filmed from a different camera angle, and all the videos stay in sync. The viewer spins the cube to switch to another angle."
+  },
+  {
+   "pub": "US20170220479A1",
+   "text": "A processor decides whether data fetched into its fastest cache should also be copied into lower cache levels. It labels data in an address range as short-lived or transient. Transient data is kept out of the other caches so it does not pollute them."
+  },
+  {
+   "pub": "US20170213138A1",
+   "text": "Software reads chat messages and works out whether the writer feels positive or negative. A first classifier spots an emotional word in the message, then features are extracted from the surrounding words. A second classifier uses those features to give the final sentiment of the user."
+  },
+  {
+   "pub": "US20160132346A1",
+   "text": "Graphics rendering is done on a remote server for several virtual machines. A guest driver shim is loaded inside each virtual machine together with a display interface that calls back into it. The memory seen by the guest is mapped so the shared graphics processor can access it."
+  },
+  {
+   "pub": "US20160224089A1",
+   "text": "A flash storage drive can tell whether it lost power while writing. Each page keeps a counter of power-off resets in its spare area. The controller compares these counters to determine whether a given page went through a sudden power loss."
+  },
+  {
+   "pub": "US20170193421A1",
+   "text": "A bank branch tool detects what a customer needs and proposes appointments with the right expert. It looks at the office workflow and at which specialists are free. The customer can then pick a meeting slot with a specialist able to solve the request."
+  },
+  {
+   "pub": "US20170023990A1",
+   "text": "A server chassis groups an adapter board, a PCIe expansion card and a cooling fan into a single input/output module. The module talks to the rest of the machine through the adapter board. This layout frees space so more components fit in a limited enclosure."
+  }
+ ],
+ "test": [
+  {
+   "pub": "US20160195945A1",
+   "text": "A digital stylus has a long body with an inner frame holding an electrical switch. The writing tip can slide along the pen axis, and pressing it on a surface pushes it back to close the switch contacts."
+  },
+  {
+   "pub": "US20160358373A1",
+   "text": "A graphics pipeline splits a four-cornered surface patch into triangles for rendering. It checks a level-of-detail factor at each corner against a limit. If none is above the limit the patch is cut into a few triangles, otherwise it keeps subdividing recursively."
+  },
+  {
+   "pub": "US20160163089A1",
+   "text": "A renderer builds an image from stored decimal numbers and stored whole numbers. It reads the integer values, then reads the floating point values that were derived from each of them, and uses both to draw the graphical data."
+  },
+  {
+   "pub": "US20170032132A1",
+   "text": "A chip creates a protected execution enclave for sensitive software. Its input/output controller contains a built-in trusted peripheral that is assigned to the enclave, so that data going to and from the peripheral cannot be read by the rest of the machine."
+  },
+  {
+   "pub": "US20170220930A1",
+   "text": "A diagnostic tool inspects a machine learning pipeline, looking at the training code and the data it learns from. It estimates what is likely to go wrong in the model, such as a data or learning issue, and reports the potential problem to the developer."
+  },
+  {
+   "pub": "US20160132354A1",
+   "text": "A chip contains different kinds of processor cores. Hardware counters track how fast each core runs a program and how much power it uses. Using these records, the processor chooses which core should run each application."
+  },
+  {
+   "pub": "US20160117729A1",
+   "text": "A web service analyses the actual content of podcasts, images and videos. From what is said or shown in the file, it makes the media searchable and picks advertisements that match the content."
+  },
+  {
+   "pub": "US20160217360A1",
+   "text": "On a phone, a digital wallet card can be handled by an app other than the one that issued it. A first app sends an instruction to a second app that is able to process the card, and the second app then carries out the operation on the card."
+  },
+  {
+   "pub": "US20160171174A1",
+   "text": "A healthcare platform helps avoid flare-ups in patients with heart failure. It finds at-risk patients, checks whether they take the right heart medicines, follows their weight over time and collects vital signs and lab results so doctors can step up treatment."
+  },
+  {
+   "pub": "US20170213236A1",
+   "text": "An analytics tool measures how much one piece of online marketing really changed a customer's decision. It compares the sequence of ads shown to one group of users with a constructed sequence that leaves out that ad, to estimate the causal effect."
+  },
+  {
+   "pub": "US20160247300A1",
+   "text": "A radiology workstation shows doctors similar medical images retrieved from a database of past cases. When the doctor changes how many similar images to display, the size of each image area on the screen is adjusted automatically."
+  },
+  {
+   "pub": "US20170221164A1",
+   "text": "A professional network decides which online courses are missing. For each skill it scores how interested members are and how much employers want it, counts the courses already available, and works out where new learning content is needed."
+  },
+  {
+   "pub": "US20160116965A1",
+   "text": "A multi-core processor moves a running program between a big and a small core. It wakes a second core, measures the performance of the first, and if the first core is doing better than a known benchmark it powers the second core back down."
+  },
+  {
+   "pub": "US20160132701A1",
+   "text": "A thin pocket gadget holds several bank cards inside a shielded case. It reads and stores the data of each credit card, then uses an RFID chip to broadcast only the card the owner selects, protecting the others from wireless skimming."
+  },
+  {
+   "pub": "US20160210054A1",
+   "text": "A cluster of hardware nodes shares one memory fabric. Memory objects are created and managed directly by the memory modules instead of by the operating system, and each object carries metadata used to manage it across the nodes."
+  },
+  {
+   "pub": "US20160195944A1",
+   "text": "An electronic pen measures how hard its tip presses on a screen. It stores two pressure thresholds in memory, and uses them to decide whether the pen is up or down, avoiding false touches around the moment of contact."
+  },
+  {
+   "pub": "US20160154420A1",
+   "text": "A controller sets the clock of a remote terminal. It computes a preset time from its own real-time clock, and the terminal waits for a calculated delay before loading that time, so that both clocks end up synchronized."
+  },
+  {
+   "pub": "US20160139885A1",
+   "text": "A cloud management tool watches server metrics and application metrics. It estimates how the application behaves, then decides on its own how many resources to add or remove and tells the cloud provider to carry out the scaling."
+  },
+  {
+   "pub": "US20160117150A1",
+   "text": "While a programmer writes code in an IDE, the autocomplete menu offers functions that can be checked. When the developer selects one, the tool runs it and validates the result it generates before the code is accepted."
+  },
+  {
+   "pub": "US20160202911A1",
+   "text": "A storage system moves data from one tier to another efficiently. It cuts an object into segments, checks which segments the destination tier does not already have, writes only those, and then deletes the object from the original tier."
+  }
+ ],
+ "ood_dev": [
+  "A pharmaceutical tablet combines a low dose of aspirin with a magnesium coating that protects the stomach lining during long term treatment of cardiovascular patients.",
+  "A folding bicycle frame made of carbon fibre with a hinge at the seat tube that locks with a quick release lever and folds the wheels side by side.",
+  "A fertilizer granule coated with a biodegradable polymer releases nitrogen slowly into the soil over one growing season for wheat and corn crops.",
+  "A concrete mix with recycled glass powder replaces part of the cement, reducing carbon emissions while keeping compressive strength for building foundations.",
+  "A running shoe has a midsole of expanded foam with a curved carbon plate that returns energy to the athlete at each stride.",
+  "A coffee machine boiler uses a double wall of stainless steel with a ceramic insulating layer to keep water at a stable brewing temperature.",
+  "A wind turbine blade has serrated trailing edges made of flexible rubber that reduce aerodynamic noise at high rotation speed.",
+  "A cosmetic cream contains hyaluronic acid and vitamin C in an oil-in-water emulsion that hydrates the skin and reduces fine wrinkles."
+ ],
+ "ood_test": [
+  "A vaccine formulation uses lipid nanoparticles to deliver messenger RNA encoding a viral spike protein, stabilized with sucrose for storage in a standard refrigerator.",
+  "A motorcycle helmet shell made of aramid fibres with an inner layer of energy-absorbing foam that crumples during an impact to protect the skull.",
+  "A hydraulic excavator arm has a reinforced steel joint with a sealed bushing that keeps grease in place and limits wear in muddy conditions.",
+  "A glass bottle for sparkling wine has a thicker base and a new cork retaining ring that holds internal pressure during transport.",
+  "A dental implant screw made of titanium has a porous surface that encourages the jawbone to grow around it after surgery.",
+  "A solar water heater on a roof uses copper tubes inside a vacuum glass cylinder to absorb heat and warm a storage tank.",
+  "A baby stroller has a one-hand folding mechanism with a spring latch and rear wheels with a foot-operated parking brake.",
+  "A biodegradable food packaging film is made from seaweed extract and plant starch, plasticized with glycerol to remain flexible.",
+  "A diesel engine piston has a ceramic-coated crown and an oil cooling gallery that lowers operating temperature under heavy load.",
+  "A garden irrigation valve made of brass opens with a mechanical float when the water level in a rain barrel rises."
+ ],
+ "dev_examples": [
+  "A refrigerator equipped with a camera automatically identifies the foods it contains using a computer vision model.\nThe system estimates, for each food, its opening date and remaining freshness.\nEvery day it generates recipes that prioritize foods close to their expiry date.\nThe recipes take into account the allergies and diets of the household.\nA smartphone notification warns the user before a product is wasted.",
+  "Software builds a graph linking the suppliers, bank accounts, addresses and invoices of a company.\nA graph neural network detects rings of fake invoices and bank accounts that are shared in a suspicious way.\nEach invoice receives a fraud risk score.\nThe system explains the score by displaying the subgraph of relationships that triggered it.\nAn analyst validates or rejects the alert, and this feedback retrains the model.",
+  "An assistant transcribes a video conference meeting in real time and attributes the speech to each participant.\nA language model extracts from the transcript the decisions made and the actions to carry out, with their owner and due date.\nA participant reviews and validates the list before it is sent.\nThe validated actions are automatically created in the team's project management tool.\nA one page summary is emailed to all participants."
+ ]
+}

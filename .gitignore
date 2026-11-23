@@ -1,26 +1,33 @@
-# Dependencies and build output (rebuild with npm install / npm run build)
+# Dependencies and build output
 node_modules/
+dist/
 deck/dist/
 
-# Python
+# Python / uv
 __pycache__/
 *.pyc
 .venv/
 venv/
+.pytest_cache/
+.ruff_cache/
 
-# Secrets: never commit a key
+# Secrets
 .env
+.env.*
+!.env.example
 *.pem
 
-# Raw patent download (about 370 MB). Rebuild with poc/prepare_data.py
+# Raw patent download (rebuild with pipeline/prepare_data.py)
+data_raw/
 poc/data_raw/
 
-# Local archives and exports (PDFs of the pitch are not committed)
+# Local archives and transient exports
 *.zip
 *.pdf
+!final_deck/Verbatim_Pitch_Deck.pdf
 
-# OS files
+# Platform and OS files
 .DS_Store
 Thumbs.db
 .vercel
-.env*
+.ipynb_checkpoints/
