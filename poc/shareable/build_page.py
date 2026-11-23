@@ -1,7 +1,8 @@
-"""Build the single-file shareable page from the team's interface, engine and frozen patents.
+"""Build the single-file page from the team's interface, engine and frozen patents.
 
 Run from poc/shareable, after export_corpus.py:
-    uv run --no-project --python 3.12 --with numpy python build_page.py
+    uv run --no-project --python 3.12 --with numpy python build_page.py            (Claude artifact)
+    uv run --no-project --python 3.12 --with numpy python build_page.py vercel     (public/index.html)
 """
 from __future__ import annotations
 
@@ -19,6 +20,8 @@ import verbatim as ps  # noqa: E402  (team constants: tagline, disclaimer, examp
 
 CORPUS = HERE / "dist" / "corpus.json.gz"
 OUT = HERE / "dist" / "verbatim.html"
+VERCEL_OUT = POC.parent / "public" / "index.html"
+VERCEL_CORPUS = POC.parent / "server_data" / "corpus.json.gz"
 
 # Wording that only makes sense with the original server. Each one must be found exactly once.
 PATCHES = [
@@ -31,8 +34,8 @@ PATCHES = [
     ("The closest patent has a similarity of ' + r.best.toFixed(3) + ', below the threshold of ' + r.threshold.toFixed(3) + '. Verbatim",
      "' + esc(r.why) + ' Verbatim"),
     ("tile('Cost of this call', u.cost.toFixed(4) + ' USD', 'from real token usage')",
-     "tile('Estimated API cost', u.cost.toFixed(4) + ' USD', 'estimated from text length')"),
-    ("tile('Tokens in / out', u.in.toLocaleString('en-US')", "tile('Tokens in / out (est.)', u.in.toLocaleString('en-US')"),
+     "tile(u.estimated ? 'Estimated API cost' : 'API cost', u.cost.toFixed(4) + ' USD', u.estimated ? 'estimated from text length' : 'from real token usage')"),
+    ("tile('Tokens in / out', u.in.toLocaleString('en-US')", "tile(u.estimated ? 'Tokens in / out (est.)' : 'Tokens in / out', u.in.toLocaleString('en-US')"),
     ("tile('Response time', t, 'similarity search')", "tile('Response time', t, 'search and comparison')"),
     ("tile('Source', 'Local embeddings', '')", "tile('Source', 'Keyword match', 'runs in your browser')"),
     ("' · similarity ' + p.score.toFixed(3) + '</div><div class=\"sim\"><div style=\"width:' + Math.max(4, Math.round(p.score * 100)) + '%\"></div></div></button>'",
@@ -57,7 +60,10 @@ def main() -> None:
         html = html.replace(old, new)
 
     data = json.loads((POC / "data" / "data_meta.json").read_text(encoding="utf-8"))
-    meta = {"app_name": ps.APP_NAME, "tagline": ps.TAGLINE, "disclaimer": ps.DISCLAIMER,
+    target = sys.argv[1] if len(sys.argv) > 1 else "artifact"
+    if target not in ("artifact", "vercel"):
+        raise SystemExit("Usage: build_page.py [artifact|vercel]")
+    meta = {"hosting": target, "app_name": ps.APP_NAME, "tagline": ps.TAGLINE, "disclaimer": ps.DISCLAIMER,
             "domain_label": data["domain_label"], "n_patents": data["n_patents"], "licence": data["licence"],
             "source": data["source"], "citation": data.get("citation", ""), "examples": ps.EXAMPLES}
     meta_json = json.dumps(meta, ensure_ascii=False).replace("<", "\\u003c")
@@ -70,8 +76,13 @@ def main() -> None:
     marker = "<script>\nconst $ = (id)"
     if html.count(marker) != 1:
         raise SystemExit("Interface changed: main script not found")
-    OUT.write_text(html.replace(marker, injected + marker), encoding="utf-8")
-    print(f"{OUT.name}: {OUT.stat().st_size / 1e6:.1f} MB")
+    out = VERCEL_OUT if target == "vercel" else OUT
+    out.parent.mkdir(exist_ok=True)
+    out.write_text(html.replace(marker, injected + marker), encoding="utf-8")
+    if target == "vercel":
+        VERCEL_CORPUS.parent.mkdir(exist_ok=True)
+        VERCEL_CORPUS.write_bytes(CORPUS.read_bytes())
+    print(f"{out.name} ({target}): {out.stat().st_size / 1e6:.1f} MB")
 
 
 if __name__ == "__main__":

@@ -1,18 +1,16 @@
 /* Connects the team's interface (poc/static/index.html) to the browser engine.
-   The page still calls /api/meta and /api/analyze: this file answers them locally, so no server or API key is needed.
-   Claude is used through the viewer's own account when the page runs in a Claude viewer.
-   Otherwise the search and the quote check still run, with a keyword comparison that is labelled as such. */
+   The page still calls /api/meta and /api/analyze: this file answers them in the browser.
+   Claude is reached through the viewer's account in a Claude artifact, or through /api/claude on Vercel.
+   Without Claude, the search and the quote check still run, with a keyword comparison labelled as such. */
 (function () {
   'use strict';
   const E = window.VerbatimEngine;
   const META = JSON.parse(document.getElementById('verbatim-meta').textContent);
+  const HOSTING = META.hosting === 'vercel' ? 'vercel' : 'artifact';
   const ANALYSIS_MODEL = 'claude-sonnet-5-5';
   const PRICE = { in: 2, out: 10 }; // USD per million tokens, Anthropic list price
+  const STOP_AI = ['not_granted', 'sampling_disabled', 'rate_limited', 'ai_unavailable'];
   const nativeFetch = window.fetch.bind(window);
-
-  const samplePromise = window.claude && typeof window.claude.use === 'function'
-    ? window.claude.use('sample').catch(() => null)
-    : Promise.resolve(null);
   const within = (promise, ms) => Promise.race([promise, new Promise((resolve) => setTimeout(() => resolve(null), ms))]);
 
   const indexPromise = (async () => {
@@ -35,17 +33,66 @@
     return JSON.parse(text.slice(start, end + 1));
   }
 
+  function artifactProvider() {
+    const samplePromise = window.claude && typeof window.claude.use === 'function'
+      ? window.claude.use('sample').catch(() => null)
+      : Promise.resolve(null);
+    const run = async (prompt, options) => {
+      const sample = await within(samplePromise, 3000);
+      if (!sample) throw { code: 'not_granted' };
+      const reply = await sample(prompt, { ...options, cache: false });
+      const input = tokens(prompt);
+      const output = tokens(reply.text);
+      return {
+        data: parseReply(reply.text),
+        truncated: reply.truncated,
+        model: reply.modelApplied || `Claude (${reply.modelTierApplied} tier)`,
+        usage: { in: input, out: output, cost: (input * PRICE.in + output * PRICE.out) / 1e6, estimated: true },
+      };
+    };
+    return {
+      available: async () => !!(await within(samplePromise, 3000)),
+      prepare: (invention) => run(E.preparePrompt(invention), { modelTier: 'quick' }),
+      rerank: (invention, candidates) => run(E.rerankPrompt(invention, candidates), { modelTier: 'quick' }),
+      analyze: (invention, patents) => run(E.analysisPrompt(invention, patents), { model: ANALYSIS_MODEL, modelTier: 'default', effort: 'low' }),
+    };
+  }
+
+  function vercelProvider() {
+    const call = async (task, body) => {
+      const response = await nativeFetch('/api/claude', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ task, ...body }) });
+      let reply = null;
+      try { reply = await response.json(); } catch (_) { /* handled below */ }
+      if (!response.ok || !reply || !reply.ok) throw { code: (reply && reply.code) || 'upstream_error' };
+      return reply;
+    };
+    return {
+      available: async () => {
+        try {
+          const response = await nativeFetch('/api/claude', { cache: 'no-store' });
+          return !!(await response.json()).available;
+        } catch (_) { return false; }
+      },
+      prepare: (invention) => call('prepare', { invention }),
+      rerank: (invention, candidates) => call('rerank', { invention, pubs: candidates.map((p) => p.pub) }),
+      analyze: (invention, patents) => call('analyze', { invention, pubs: patents.map((p) => p.pub) }),
+    };
+  }
+
+  const ai = HOSTING === 'vercel' ? vercelProvider() : artifactProvider();
+
   function failureNote(error) {
     const code = error && error.code;
     if (code === 'not_granted' || code === 'sampling_disabled') return 'Claude is not enabled for this viewer, so this result uses the keyword comparison.';
-    if (code === 'rate_limited') return 'Claude usage limit reached, so this result uses the keyword comparison. Retry later for the AI analysis.';
+    if (code === 'ai_unavailable') return 'The AI service is not available right now, so this result uses the keyword comparison.';
+    if (code === 'rate_limited') return 'The AI usage limit is reached, so this result uses the keyword comparison. Retry later for the AI analysis.';
+    if (code === 'refused') return 'Claude declined to analyze this description, so this result uses the keyword comparison.';
     return 'The Claude analysis did not complete, so this result uses the keyword comparison. You can retry.';
   }
 
   async function meta() {
     await indexPromise;
-    const sample = await within(samplePromise, 3000);
-    return { ...META, llm_available: !!sample, model: ANALYSIS_MODEL, ready: true };
+    return { ...META, llm_available: await ai.available(), model: ANALYSIS_MODEL, ready: true };
   }
 
   async function analyze({ text, force }) {
@@ -55,21 +102,25 @@
       return json({ mode: 'error', notices: [{ level: 'err', text: 'Please describe the invention in 20 to 4,000 characters.' }] }, 422);
     }
     const index = await indexPromise;
-    const sample = await within(samplePromise, 3000);
+    const aiAvailable = await ai.available();
     const notices = [];
+    const total = { in: 0, out: 0, cost: 0, estimated: false };
+    const count = (usage) => {
+      total.in += usage.in;
+      total.out += usage.out;
+      total.cost += usage.cost;
+      total.estimated = total.estimated || usage.estimated;
+    };
     let query = invention;
     let inDomain = null;
-    let chars = { in: 0, out: 0 };
     let claudeFailed = false;
 
-    if (sample) {
+    if (aiAvailable) {
       try {
-        const prompt = E.preparePrompt(invention);
-        const reply = await sample(prompt, { modelTier: 'quick', cache: false });
-        const parsed = parseReply(reply.text);
-        if (typeof parsed.english === 'string' && parsed.english.trim()) query = parsed.english.trim();
-        if (typeof parsed.in_domain === 'boolean') inDomain = parsed.in_domain;
-        chars = { in: prompt.length, out: reply.text.length };
+        const reply = await ai.prepare(invention);
+        if (typeof reply.data.english === 'string' && reply.data.english.trim()) query = reply.data.english.trim();
+        if (typeof reply.data.in_domain === 'boolean') inDomain = reply.data.in_domain;
+        count(reply.usage);
       } catch (error) {
         claudeFailed = true;
         notices.push({ level: 'warn', text: failureNote(error) });
@@ -95,15 +146,13 @@
     }
     if (force) notices.push({ level: 'warn', text: 'Analysis launched outside the covered domain: interpret with caution.' });
 
-    if (sample && !claudeFailed) {
+    if (aiAvailable && !claudeFailed) {
       try {
-        const prompt = E.rerankPrompt(invention, found.hits.map(toPatent));
-        const reply = await sample(prompt, { modelTier: 'quick', cache: false });
-        const ranked = E.applyRerank(parseReply(reply.text).best, found.hits, (h) => index.docs[h.id].pub);
-        patents = ranked.map(toPatent);
-        chars = { in: chars.in + prompt.length, out: chars.out + reply.text.length };
+        const reply = await ai.rerank(invention, found.hits.map(toPatent));
+        patents = E.applyRerank(reply.data.best, found.hits, (h) => index.docs[h.id].pub).map(toPatent);
+        count(reply.usage);
       } catch (error) {
-        if (error && ['not_granted', 'sampling_disabled', 'rate_limited'].includes(error.code)) {
+        if (error && STOP_AI.includes(error.code)) {
           claudeFailed = true;
           notices.push({ level: 'warn', text: failureNote(error) });
         } else {
@@ -112,12 +161,10 @@
       }
     }
 
-    if (sample && !claudeFailed) {
+    if (aiAvailable && !claudeFailed) {
       try {
-        const prompt = E.analysisPrompt(invention, patents);
-        const reply = await sample(prompt, { model: ANALYSIS_MODEL, modelTier: 'default', effort: 'low', cache: false });
-        const parsed = parseReply(reply.text);
-        const answers = new Map((Array.isArray(parsed.patents) ? parsed.patents : []).map((p) => [p && p.pub, p]));
+        const reply = await ai.analyze(invention, patents);
+        const answers = new Map((Array.isArray(reply.data.patents) ? reply.data.patents : []).map((p) => [p && p.pub, p]));
         let analyzed = 0;
         for (const p of patents) {
           const answer = answers.get(p.pub);
@@ -128,18 +175,24 @@
         if (!analyzed) throw new Error('no patent in the reply');
         if (analyzed < patents.length) notices.push({ level: 'warn', text: `${patents.length - analyzed} patent(s) not analyzed by Claude.` });
         if (reply.truncated) notices.push({ level: 'warn', text: 'The Claude answer was cut short: some claims may be missing.' });
-        const inTokens = Math.ceil(chars.in / 4) + tokens(prompt);
-        const outTokens = Math.ceil(chars.out / 4) + tokens(reply.text);
-        const model = reply.modelApplied || `Claude (${reply.modelTierApplied} tier)`;
+        count(reply.usage);
         return json({
           mode: 'live', best: found.best, patents, notices, seconds: seconds(),
-          usage: { model, in: inTokens, out: outTokens, cost: (inTokens * PRICE.in + outTokens * PRICE.out) / 1e6, price_in: PRICE.in, price_out: PRICE.out, detail: 'about 4 characters per token, priced as Sonnet 5.5' },
+          usage: {
+            model: reply.model, in: total.in, out: total.out, cost: total.cost, estimated: total.estimated, price_in: PRICE.in, price_out: PRICE.out,
+            detail: total.estimated ? 'about 4 characters per token, priced as Sonnet 5.5' : 'real usage across all Claude calls',
+          },
         });
       } catch (error) {
         notices.push({ level: 'warn', text: failureNote(error) });
       }
-    } else if (!sample) {
-      notices.push({ level: 'warn', text: 'Keyword comparison, no AI: open this page in Claude for the AI claim analysis. Every quote shown is still checked word for word against the claim.' });
+    } else if (!aiAvailable) {
+      notices.push({
+        level: 'warn',
+        text: HOSTING === 'vercel'
+          ? 'Keyword comparison, no AI: the AI service is not configured yet. Every quote shown is still checked word for word against the claim.'
+          : 'Keyword comparison, no AI: open this page in Claude for the AI claim analysis. Every quote shown is still checked word for word against the claim.',
+      });
     }
 
     for (const p of patents) Object.assign(p, E.keywordAnalysis(index, query, p));
